@@ -9,5 +9,5 @@
 Initially clone the project from this repository.
 
 ```sh
-$ git clone https://github.com/thathsaranipun/MobileCW.git
+$ git clone https://github.com/MobileCW/MobileCW.git
 ```
