@@ -47,15 +47,22 @@
     }
     .horizontal-post {
       position: relative!important;
-      left:44px ;
+      left:44px!important ;
     }
     .logo-image {
-      width: 94;
-      height: 62;
+      width: 94!important;
+      height: 62!important;
     }
     .man-image {
-      width: 38;
-      height: 38;
+      width: 38!important;
+      height: 38!important;
+    }
+    .border {
+      border-style :none!important;
+    }
+    .bar {
+      width: 25!important;
+      height: 25!important;
     }
   </style>
   <body>   
@@ -154,10 +161,10 @@
       <div data-role="header">
         <div data-role="navbar" >
           <ul>
-            <li><a href="#" class="ui-btn-active">主页</a></li>
-            <li><a href="#">第二页</a></li>
-            <li><a href="#">搜索</a></li>
-            <li><a href="#">搜索</a></li>
+            <li><a href="#" class="ui-btn-active border"><img src="assets/navBar/home.png" alt="Girl in a jacket" class="bar"></a></li>
+            <li><a href="#" class="border"><img src="assets/navBar/account.png" alt="Girl in a jacket" class="bar"></a></li>
+            <li><a href="#" class="border"><img src="assets/navBar/cart.png" alt="Girl in a jacket" class="bar"></a></li>
+            <li><a href="#" class="border"><img src="assets/navBar/qr.png" alt="Girl in a jacket" class="bar"></a></li>
           </ul>
         </div>
       </div> 
