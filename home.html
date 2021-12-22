@@ -12,6 +12,7 @@
     <script src="libraries/jquery.mobile-1.4.5.min.js"></script>
     <link rel="stylesheet" href="libraries/themes/foodMunchTheme.min.css" />
     <link rel="stylesheet" href="libraries/themes/jquery.mobile.icons.min.css" />
+    <link rel="stylesheet" href="styles/common.css" />
   </head>
   <style>
     .space {
@@ -59,13 +60,6 @@
       width: 38!important;
       height: 38!important;
     }
-    .border {
-      border-style :none!important;
-    }
-    .bar {
-      width: 25!important;
-      height: 25!important;
-    }
     @media screen and (orientation:landscape) {
       .left {
       position: relative!important;
@@ -83,7 +77,7 @@
         </div>
         <div class="ui-block-b">
           <div class="ui-bar ui-bar space border-color left" >
-            <img src="assets/icons/icon1.png" alt="Girl in a jacket" class="man-image" >
+            <img src="assets/icons/icon1.png" alt="Girl in a jacket" class="man-image" />
           </div>
         </div> 
       </div>
@@ -136,28 +130,28 @@
         <div class="ui-block-a"><div class="ui-bar ui-bar space border-color right" style="height:34px">Resturants</div></div>
         <div class="ui-block-b"><div class="ui-bar ui-bar space border-color left" style="height:34px">See All </div></div>
       </div> 
-      <div class="card rounded space">
+      <div class="card space">
         <img class="card-img-top pen" src="assets/resturant1.jpeg" alt="Card image cap">
         <div class="card-body rechange">
           <p class="card-text"><b>Rose Garden Restaurant</b></p>
           <p class="card-text font">Burger - Chiken - Riche - Wings</p>
         </div>
       </div>
-      <div class="card rounded space" >
+      <div class="card space" >
         <img class="card-img-top pen" src="assets/resturant2.jpeg" alt="Card image cap">
         <div class="card-body rechange">
           <p class="card-text"><b>Chicken Hut</b></p>
           <p class="card-text font"> Chiken Eat with Curry</p>
         </div>
       </div>
-      <div class="card rounded space" >
+      <div class="card space" >
         <img class="card-img-top pen" src="assets/resturant3.jpg" alt="Card image cap">
         <div class="card-body rechange">
           <p class="card-text"><b>Chicken Hut</b></p>
           <p class="card-text font"> Chiken Eat with Curry</p>
         </div>
       </div>
-      <div class="card rounded space" >
+      <div class="card space" >
         <img class="card-img-top pen" src="assets/resturant4.jpg" alt="Card image cap">
         <div class="card-body rechange">
           <p class="card-text"><b>Chicken Hut</b></p>
@@ -169,10 +163,10 @@
       <div data-role="header">
         <div data-role="navbar" >
           <ul>
-            <li><a href="#" class="ui-btn-active border"><img src="assets/navBar/home.png" alt="Girl in a jacket" class="bar"></a></li>
-            <li><a href="#" class="border"><img src="assets/navBar/account.png" alt="Girl in a jacket" class="bar"></a></li>
-            <li><a href="#" class="border"><img src="assets/navBar/cart.png" alt="Girl in a jacket" class="bar"></a></li>
-            <li><a href="#" class="border"><img src="assets/navBar/qr.png" alt="Girl in a jacket" class="bar"></a></li>
+            <li><a href="#" class="ui-btn-active border" target="_self" data-transition="slide"><img src="assets/navBar/home.png" alt="Girl in a jacket" class="bar"></a></li>
+            <li><a href="#" class="border" target="_self" data-transition="slide"><img src="assets/navBar/account.png" alt="Girl in a jacket" class="bar"></a></li>
+            <li><a href="cart.html" class="border" target="_self" data-transition="slide"><img src="assets/navBar/cart.png" alt="Girl in a jacket" class="bar"></a></li>
+            <li><a href="#" class="border" target="_self" data-transition="slide"><img src="assets/navBar/qr.png" alt="Girl in a jacket" class="bar"></a></li>
           </ul>
         </div>
       </div> 
