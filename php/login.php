@@ -1,6 +1,17 @@
 <?php
 //including the database connection file
-include_once("config/db.php");
+$servername = "localhost";
+$username = "mobile_ux";
+$password = "";
+
+// Create connection
+$conn = new mysqli($servername, $username, $password);
+
+// Check connection
+if ($conn->connect_error) {
+  die("Connection failed: " . $conn->connect_error);
+}
+echo "Connected successfully";
 
 if(isset($_POST['Submit'])) {	
 	$name = mysqli_real_escape_string($mysqli, $_POST['name']);
