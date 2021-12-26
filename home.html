@@ -60,10 +60,38 @@
       width: 38!important;
       height: 38!important;
     }
+    .horizontal-width {
+      flex: 0 0 auto!important;
+      width : 41.666667%!important;
+    }
+    .wrapper {
+      display: grid;
+      grid-gap: 1em;
+      grid-template-areas:
+      "grid_one"
+      "grid_two"
+      "grid_three"
+      "grid_four"
+    }
     @media screen and (orientation:landscape) {
       .left {
       position: relative!important;
-      right:-328px ;
+      right:-318px ;
+      }
+      .horizontal-width {
+        flex: 0 0 auto!important;
+        width : 22.666667%!important;
+      }
+      .horizontal-pen {
+        position: relative!important;
+        width: 378px;
+        height: 180px;
+      }
+      .wrapper {
+        grid-template-columns: 50% auto;
+        grid-template-areas:
+        "grid_one   grid_two"
+        "grid_three  grid_four";
       }
     }
   </style>
@@ -99,30 +127,43 @@
       <div role="main">
         <div class="container-fluid">
           <div class="scrolling-wrapper row flex-row flex-nowrap mt-4 pb-4 pt-2">
-            <div class="col-5">
+            <div class="horizontal-width">
               <div class="card border-change pen " >
                 <img class="card-img-top pen " src="assets/foods/food2.jpeg" alt="Card image cap">
                 <p class="card-text horizontal-post"><b>Parata</b></p>
               </div>
             </div>
-            <div class="col-5">
+            <div class="horizontal-width">
               <div class="card border-change pen" >
                 <img class="card-img-top pen" src="assets/foods/food3.jpeg" alt="Card image cap">
                 <p class="card-text horizontal-post"><b>Pizza</b></p>
               </div>
             </div>
-            <div class="col-5">
+            <div class="horizontal-width">
               <div class="card border-change pen" >
                 <img class="card-img-top pen" src="assets/foods/food4.jpeg" alt="Card image cap">
                 <p class="card-text horizontal-post"><b>Noodles</b></p>
               </div>
             </div>
-            <div class="col-5">
+            <div class="horizontal-width">
               <div class="card border-change pen" >
                 <img class="card-img-top pen" src="assets/foods/food5.jpeg" alt="Card image cap">
                 <p class="card-text horizontal-post"><b>Parata</b></p>
               </div>
-            </div>       
+            </div> 
+            <div class="horizontal-width">
+              <div class="card border-change pen" >
+                <img class="card-img-top pen" src="assets/foods/food5.jpeg" alt="Card image cap">
+                <p class="card-text horizontal-post"><b>Parata</b></p>
+              </div>
+            </div>  
+            <div class="horizontal-width">
+              <div class="card border-change pen" >
+                <img class="card-img-top pen" src="assets/foods/food5.jpeg" alt="Card image cap">
+                <p class="card-text horizontal-post"><b>Parata</b></p>
+              </div>
+            </div>        
+            
           </div>
         </div>
       </div>
@@ -130,32 +171,34 @@
         <div class="ui-block-a"><div class="ui-bar ui-bar space border-color right" style="height:34px">Resturants</div></div>
         <div class="ui-block-b"><div class="ui-bar ui-bar space border-color left" style="height:34px">See All </div></div>
       </div> 
-      <div class="card space">
-        <img class="card-img-top pen" src="assets/resturant1.jpeg" alt="Card image cap">
-        <div class="card-body rechange">
-          <p class="card-text"><b>Rose Garden Restaurant</b></p>
-          <p class="card-text font">Burger - Chiken - Riche - Wings</p>
+      <div class="wrapper">
+        <div class="card space grid_one">
+          <img class="card-img-top pen horizontal-pen " src="assets/resturant1.jpeg" alt="Card image cap">
+          <div class="card-body rechange">
+            <p class="card-text"><b>Rose Garden Restaurant</b></p>
+            <p class="card-text font">Burger - Chiken - Riche - Wings</p>
+          </div>
         </div>
-      </div>
-      <div class="card space" >
-        <img class="card-img-top pen" src="assets/resturant2.jpeg" alt="Card image cap">
-        <div class="card-body rechange">
-          <p class="card-text"><b>Chicken Hut</b></p>
-          <p class="card-text font"> Chiken Eat with Curry</p>
+        <div class="card space grid_two" >
+          <img class="card-img-top pen horizontal-pen " src="assets/resturant2.jpeg" alt="Card image cap">
+          <div class="card-body rechange">
+            <p class="card-text"><b>Chicken Hut</b></p>
+            <p class="card-text font"> Chiken Eat with Curry</p>
+          </div>
         </div>
-      </div>
-      <div class="card space" >
-        <img class="card-img-top pen" src="assets/resturant3.jpg" alt="Card image cap">
-        <div class="card-body rechange">
-          <p class="card-text"><b>Chicken Hut</b></p>
-          <p class="card-text font"> Chiken Eat with Curry</p>
+        <div class="card space grid_three" >
+          <img class="card-img-top pen horizontal-pen " src="assets/resturant3.jpg" alt="Card image cap">
+          <div class="card-body rechange">
+            <p class="card-text"><b>Chicken Hut</b></p>
+            <p class="card-text font"> Chiken Eat with Curry</p>
+          </div>
         </div>
-      </div>
-      <div class="card space" >
-        <img class="card-img-top pen" src="assets/resturant4.jpg" alt="Card image cap">
-        <div class="card-body rechange">
-          <p class="card-text"><b>Chicken Hut</b></p>
-          <p class="card-text font"> Chiken Eat with Curry</p>
+        <div class="card space grid_four" >
+          <img class="card-img-top pen horizontal-pen " src="assets/resturant4.jpg" alt="Card image cap">
+          <div class="card-body rechange">
+            <p class="card-text"><b>Chicken Hut</b></p>
+            <p class="card-text font"> Chiken Eat with Curry</p>
+          </div>
         </div>
       </div>
     </div>
