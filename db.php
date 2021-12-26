@@ -1,10 +1,11 @@
 <?php
 $servername = "localhost";
-$username = "mobile_ux";
+$username = "root";
 $password = "password";
+$dbname = "mobile_ux";
 
 // Create connection
-$conn = new mysqli($servername, $username, $password);
+$conn = mysqli_connect($servername,$username,"",$dbname);
 
 // Check connection
 if ($conn->connect_error) {

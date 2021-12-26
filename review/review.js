@@ -11,7 +11,7 @@ $("#submitButton").click(function () {
         type: 'post',
         success: function (response)
         {
-            setInterval('location.reload()', 1000);    
+            setInterval('location.reload()', 500);    
             var result = eval('(' + response + ')');
             if (response)
             {
