@@ -13,8 +13,8 @@
     <link rel="stylesheet" href="../libraries/themes/foodMunchTheme.min.css" />
     <link rel="stylesheet" href="../libraries/themes/jquery.mobile.icons.min.css" />
     <link rel="stylesheet" href="../styles/common.css" />
-    <script src="../review/review.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://kit.fontawesome.com/2458e99c54.js" crossorigin="anonymous"></script>
   </head>
   <style>
     .button-back {
@@ -42,15 +42,15 @@
     }
    .reply {
         position: relative!important;
-        top: -5px!important;
-        right: 2px;
+        top: 1px!important;
+        right: 9px;
         font-size: 11px;
         color: gray!important;
     }
     .edit {
         position: relative!important;
         left: 40px;
-        top: 54px!important;
+        top: 38px!important;
         color:#FF7622!important;
     }
     body {
@@ -108,14 +108,65 @@
     }
     .btn-reply {
         font-size: 0.8em;
-        text-decoration: underline;
-        color: #888787;
+        text-decoration: none;
+        color: #888787!important;
         cursor:pointer;
     }
     #comment-message {
-        margin-left: 20px;
+        margin-left: 1px;
         color: #189a18;
         display: none;
+    }
+    .icon {
+        position: relative!important;
+        left: 9px;
+        top: -1px!important;
+    }
+    .icon2 {
+        position: relative!important;
+        left: 9px;
+        top: -1px!important;
+    }
+    .icon-reply2 {
+        position: relative!important;
+        left: -9px!important;
+        top: 1px!important;
+    }
+    @media screen and (orientation:landscape) {
+        .edit {
+            position: relative!important;
+            left: 264px;
+            top: 54px!important;
+            color:#FF7622!important;
+        }
+        .reply{
+            position: relative!important;
+            top: -60px!important;
+            right: -560px;
+            font-size: 14px;
+            color: gray!important;
+        }
+        .reply2 {
+            position: relative!important;
+            top: -65px!important;
+            right: -564px!important;
+            font-size: 14px;
+            color: gray!important;
+        }
+        .icon-review {
+            position: relative!important;
+            top: 10px!important;
+            right: -49px;
+            width: 45px;
+            height: 45px;
+        }
+        .icon-reply2 {
+            left: 529px!important;
+            font-size: 14px;
+        }
+        .comment-info {
+            font-size: 1em;
+        }
     }
   </style>
   <body>
@@ -129,157 +180,47 @@
                 </div>
                 </label>
             </div>
-            <div class="ui-block-b edit"><div class="ui-bar">ADD COMMENT
-            </div></div>
+            <div><a class='edit' href='#popupLogin' data-rel='popup' data-position-to='window'   data-transition='pop' >ADD COMMENT</a></div>
+            
         </div>
         <br>
-        <form id="frm-comment">
-            <div class="input-row">
-                <input type="hidden" name="comment_id" id="commentId"
-                placeholder="Name" /> <input class="input-field"
-                type="text" name="name" id="name" placeholder="Name" />
+        <div data-role="popup" id="popupLogin" data-theme="a" class="ui-corner-all">
+            <div style="padding:10px 20px;">
+                <h3>ADD COMMENT</h3>
+                <form id="frm-comment" >
+                    <div class="input-row">
+                        <input type="hidden" name="comment_id" id="commentId" placeholder="Name" /> 
+                        <input class="input-field" type="text" name="name" id="name" placeholder="Name" />
+                    </div>
+                    <div class="input-row">
+                        <textarea class="input-field" type="text" name="comment"
+                        id="comment" placeholder="Add a Comment">  </textarea>
+                    </div>
+                    <div>
+                        <input type="button" class="btn-submit" id="submitButton"
+                        value="Publish" />
+                        <div class="alert alert-success" id="comment-message" role="alert">
+                            Comments Added Successfully!
+                        </div>
+                    </div>
+                </form>
             </div>
-            <div class="input-row">
-                <textarea class="input-field" type="text" name="comment"
-                id="comment" placeholder="Add a Comment">  </textarea>
-            </div>
-            <div>
-                <input type="button" class="btn-submit" id="submitButton" 
-                value="Publish" />
-                <div class="alert alert-success" id="comment-message" role="alert">
-                    Comments Added Successfully!
-                  </div>
-            </div>
-        </form>
+        </div>
         <div id="output"></div>
-    </div>
-    <div data-role="footer" data-position="fixed">
-        <div data-role="header">
-            <div data-role="navbar" >
-            <ul>
-                <li><a href="#" class="ui-btn-active border" target="_self" data-transition="slide"><img src="../assets/navBar/home.png" alt="Girl in a jacket" class="bar"></a></li>
-                <li><a href="#" class="border" target="_self" data-transition="slide"><img src="../assets/navBar/account.png" alt="Girl in a jacket" class="bar"></a></li>
-                <li><a href="cart.html" class="border" target="_self" data-transition="slide"><img src="../assets/navBar/cart.png" alt="Girl in a jacket" class="bar"></a></li>
-                <li><a href="#" class="border" target="_self" data-transition="slide"><img src="../assets/navBar/qr.png" alt="Girl in a jacket" class="bar"></a></li>
-            </ul>
-            </div>
-        </div> 
-    </div>
+        </div>
+        <div data-role="footer" data-position="fixed">
+            <div data-role="header">
+                <div data-role="navbar" >
+                <ul>
+                    <li><a href="#" class="ui-btn-active border" target="_self" data-transition="slide"><img src="../assets/navBar/home.png" alt="Girl in a jacket" class="bar"></a></li>
+                    <li><a href="#" class="border" target="_self" data-transition="slide"><img src="../assets/navBar/account.png" alt="Girl in a jacket" class="bar"></a></li>
+                    <li><a href="cart.html" class="border" target="_self" data-transition="slide"><img src="../assets/navBar/cart.png" alt="Girl in a jacket" class="bar"></a></li>
+                    <li><a href="#" class="border" target="_self" data-transition="slide"><img src="../assets/navBar/qr.png" alt="Girl in a jacket" class="bar"></a></li>
+                </ul>
+                </div>
+            </div> 
+        </div>
   </body>
 </html>
+<script src="review.js"></script>
 
-
-
-<script>
-    function postReply(commentId) {
-        $('#commentId').val(commentId);
-        $("#name").focus();
-    }
-    $("#submitButton").click(function () {
-           $("#comment-message").css('display', 'none');
-        var str = $("#frm-comment").serialize();
-        $.ajax({
-            url: "comment-add.php",
-            data: str,
-            type: 'post',
-            success: function (response)
-            {
-                setInterval('location.reload()', 1000);    
-                var result = eval('(' + response + ')');
-                if (response)
-                {
-                    $("#comment-message").css('display', 'inline-block');
-                    $("#name").val("");
-                    $("#comment").val("");
-                    $("#commentId").val("");
-                    listComment();
-                } else
-                {
-                    alert("Failed to add comments !");
-                    return false;
-                }
-            }
-        });
-    });
-    $(document).ready(function () {
-           listComment();
-    });
-    function listComment() {
-        $.post("comment-list.php",
-                function (data) {
-                       var data = JSON.parse(data);
-                    
-                    var comments = "";
-                    var replies = "";
-                    var item = "";
-                    var parent = -1;
-                    var results = new Array();
-
-                    var list = $("<ul class='outer-comment'>");
-                    var item = $("<li>").html(comments);
-
-                    for (var i = 0; (i < data.length); i++)
-                    {
-                        var commentId = data[i]['comment_id'];
-                        parent = data[i]['parent_comment_id'];
-
-                        if (parent == "0")
-                        {
-                            comments =  "<div class='row '>"+
-                                        "<div class='col-2'>"+
-                                        "<img src='../assets/icons/icon9.png' alt='Girl in a jacket' class='icon-review'>"+
-                                        " </div>"+
-                                        " <div class='col card-list'>"+
-                                        "<div class='' >"+
-                                        "<div class='card-one'>"+
-                                        "<div class='comment-row'>"+
-                                        "<div class='comment-info'><span class='commet-row-label'>from</span> <span class='posted-by'>" + data[i]['comment_sender_name'] + " </span> <span class='commet-row-label'>at</span> <span class='posted-at'>" + data[i]['date'] + "</span></div>" + 
-                                        "<div class='comment-text'>" + data[i]['comment'] + "</div>"+
-                                        "<div><a class='btn-reply reply' onClick='postReply(" + commentId + ")'>Reply</a></div>"+
-                                        "</div>"+
-                                        "</div>"+
-                                        "</div>"+
-                                        "</div>"+
-                                        "</div>";
-
-                            var item = $("<li>").html(comments);
-                            list.append(item);
-                            var reply_list = $('<ul>');
-                            item.append(reply_list);
-                            listReplies(commentId, data, reply_list);
-                        }
-                    }
-                    $("#output").html(list);
-                });
-    }
-                function listReplies(commentId, data, list) {
-                    for (var i = 0; (i < data.length); i++)
-                    {
-                        if (commentId == data[i].parent_comment_id)
-                        {
-                            var comments =      "<div class='row '>"+
-                                                "<div class='col-2'>"+
-                                                "<img src='../assets/icons/icon10.png' alt='Girl in a jacket' class='icon-review'>"+
-                                                " </div>"+
-                                                " <div class='col card-list'>"+
-                                                "<div class='' >"+
-                                                "<div class='card-one'>"+
-                                                "<div class='comment-row'>"+
-                                                " <div class='comment-info'><span class='commet-row-label'>from</span> <span class='posted-by'>" + data[i]['comment_sender_name'] + " </span> <span class='commet-row-label'>at</span> <span class='posted-at'>" + data[i]['date'] + "</span></div>" + 
-                                                "<div class='comment-text'>" + data[i]['comment'] + "</div>"+
-                                                "<div><a class='btn-reply reply' onClick='postReply(" + data[i]['comment_id'] + ")'>Reply</a></div>"+
-                                                "</div>"+
-                                                "</div>"+
-                                                "</div>"+
-                                                "</div>"+
-                                                "</div>";
-                
-                var item = $("<li>").html(comments);
-                var reply_list = $('<ul>');
-                list.append(item);
-                item.append(reply_list);
-                listReplies(data[i].comment_id, data, reply_list);
-            }
-        }
-    }
-</script>
