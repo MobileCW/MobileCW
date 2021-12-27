@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>FoodMunch</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="../libraries/jquery.mobile-1.4.5.min.css" />
+    <script src="../libraries/jquery-1.11.3.min.js"></script>
+    <script src="../libraries/jquery.mobile-1.4.5.min.js"></script>
+    <link rel="stylesheet" href="../libraries/themes/foodMunchTheme.min.css" />
+    <link rel="stylesheet" href="../libraries/themes/jquery.mobile.icons.min.css" />
+    <script src="https://checkout.stripe.com/checkout.js"></script>
+    <script src="../payment/cart.js"></script>
+
+    <script src="../payment/payment.js"></script>
+
+  </head>
+  <style>
+
+    .edit-one {
+        position: relative!important;
+        top: 14px!important;
+        right: -50px;
+        color:#FF7622!important;
+    }
+    .button-back {
+        position: relative!important;
+        top: 10px!important;
+        right: -4px!important;
+    }
+    .cart-description {
+        position: relative!important;
+        top: -24px!important;
+        right: -44px;
+        font-size: 20px;
+    }
+   .payment1 {
+        position: relative!important;
+        top: -1px!important;
+        right: 14px;
+   }
+   .border-payment {
+        height: 84px;
+        width: 105px;
+        background-color: #ffff;
+        border: none;
+   }
+   .payment2 {
+        position: relative!important;
+        top: -10px!important;
+        right: 14px;
+   }
+   .croll {
+        position: relative!important;
+        top: -42px!important;
+        right: -2px;
+   } 
+   .cost {
+        position: relative!important;
+        top: 130px!important;
+        right: -8px!important;
+   }
+   .login {
+        position: relative!important;
+        right: -8px!important;
+        height: 62px!important;
+        background-color: #FF7622!important;
+        color: #FFFFFF!important;
+        text-shadow: none!important;
+        top: 148px!important;
+        width: 349px!important;
+        border-radius: 12px!important;
+  }
+  .cancel-login {
+        position: relative!important;
+        right: -8px!important;
+        height: 62px!important;
+        background-color: #df4641!important;
+        color: #FFFFFF!important;
+        text-shadow: none!important;
+        top: 168px!important;
+        width: 349px!important;
+        border-radius: 12px!important;
+  }
+  </style>
+  <body>
+    <div class="p-1">
+        <div class="ui-grid-a">
+          <div class="ui-block-a">
+              <label for="text-basic">
+                <div class="ui-alt-icon">
+                  <a href="../cart.html" target="_self" class="ui-btn ui-shadow ui-corner-all ui-icon-carat-l ui-btn-icon-notext ui-btn-inline button-back">Payment</a>
+                  <div class="cart-description">Payment</div>
+                </div>
+              </label>
+          </div>
+        </div>
+        <br>
+        <br>
+        <div class="ui-grid-c croll">
+            <div class="ui-block-a"><div class="ui-bar ui-bar-a border-payment"><img class="payment1" src="../assets/payment/payment1.png" alt="Italian Trulli"></div></div>
+            <div class="ui-block-b"><div class="ui-bar ui-bar-a border-payment" ><img class="payment1" src="../assets/payment/payment2.png" alt="Italian Trulli"></div></div>
+            <div class="ui-block-c"><div class="ui-bar ui-bar-a border-payment" ><img  class="payment1" src="../assets/payment/payment3.png" alt="Italian Trulli"></div></div>
+            <div class="ui-block-d"><div class="ui-bar ui-bar-a border-payment" ><img  class="payment2" src="../assets/payment/payment4.png" alt="Italian Trulli"></div></div>
+        </div>
+        <br>
+        <form>
+          <label>
+          <input type="radio" name="radio-choice-0" value="card" id="radio-choice-0a" class="custom"/><img  src="../assets/payment/payment6.png" alt="Italian Trulli"></label>
+          <label for="radio-choice-0b">
+          <input type="radio" name="radio-choice-0" value="stripe" id="radio-choice-0b" class="custom" checked/>
+            + ADD NEW
+          </label>
+        </form>
+        <div align="center" id="thankyouPayment"></div>
+        <label class="cost">TOTAL : &nbsp;<b>RS </b> <b class="total-cart"></b>  </label>  
+        <button type="button" class="btn btn-lg login" id="paynow-btn">PAY & CONFIRM</button>
+        <button type="button" class="btn btn-lg cancel-login" id="cancel-btn">CANCEL ORDER</button>
+     
+     
+
+    </div>
+  </body>
+</html>
