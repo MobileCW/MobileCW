@@ -57,7 +57,7 @@ function listComment() {
                         
                         comments =  "<div class='row '>"+
                                     "<div class='col-2'>"+
-                                    " <img src='https://ui-avatars.com/api/?name="+data[i]['comment_sender_name']+"?size=50?background=random' class='icon-review'/>"+
+                                    " <img src='https://ui-avatars.com/api/?name="+data[i]['comment_sender_name']+"& background=random' class='icon-review'/>"+
                                     " </div>"+
                                     " <div class='col card-list'>"+
                                     "<div class='' >"+
@@ -92,7 +92,7 @@ function listComment() {
                     {
                         var comments =      "<div class='row '>"+
                                             "<div class='col-2'>"+
-                                            " <img src='https://ui-avatars.com/api/?name="+data[i]['comment_sender_name']+"?size=50?background=random' class='icon-review'/>"+
+                                            " <img src='https://ui-avatars.com/api/?name="+data[i]['comment_sender_name']+"& background=random' class='icon-review'/>"+
                                             " </div>"+
                                             " <div class='col card-list'>"+
                                             "<div class='' >"+
