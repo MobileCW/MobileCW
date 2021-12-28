@@ -7,20 +7,21 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/2458e99c54.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="../libraries/jquery.mobile-1.4.5.min.css" />
+    <link rel="stylesheet" href="../libraries/themes/jquery.mobile.icons.min.css" />
     <script src="../libraries/jquery-1.11.3.min.js"></script>
     <script src="../libraries/jquery.mobile-1.4.5.min.js"></script>
     <link rel="stylesheet" href="../libraries/themes/foodMunchTheme.min.css" />
-    <link rel="stylesheet" href="../libraries/themes/jquery.mobile.icons.min.css" />
   </head>
   <style>
     .magic {
       position: relative!important;
       top: -128px!important;
-      height: 235px;
+      height: 235px!important;
       border-top-left-radius: 1.2rem!important;
       border-top-right-radius: 1.2rem!important;
-      background-color: rgba(235, 235, 235, 0.822);
+      background-color: rgba(235, 235, 235, 0.822)!important;
       width: 374px!important;
       right: 15px!important;
     }
@@ -31,56 +32,57 @@
       background-color: #FF7622!important;
       color: #FFFFFF!important;
       text-shadow: none!important;
-      top: 88px;
+      top: 88px!important;
       width: 338px!important;
       border-radius: 12px!important;
     }
     .total {
       position: relative!important;
-      top: 38px;
+      top: 38px!important;
     }
     .address {
-      height: 45px;
-      width: 212px;
-      top: 18px;
-      right: 14px;
+      height: 45px!important;
+      width: 212px!important;
+      top: 18px!important;
+      right: 14px!important;
     }
     .edit {
-      left: 108px;
-      top: 18px;
+      left: 108px!important;
+      top: 18px!important;
       color:#FF7622!important;
     }
     .space {
       border: none!important;
+      right: -6px!important;
     }
     .con-style {
-        width: 10px;
-        height: 10px;
+        width: 10px!important;
+        height: 10px!important;
     }
     .cart-image{
-        width: 136px;
-        height: 118px;
+        width: 136px!important;
+        height: 118px!important;
         border-radius: 28px!important;
     }
     .cart-font {
         position: relative!important;
         top: 8px!important;
-        right: -28px;
+        right: -28px!important;
     }
     .cart-price {
         position: relative!important;
-        top: -62px!important;
-        right: -158px;
+        top: -80px!important;
+        right: -158px!important;
     }
     .cart-one {
         position: relative!important;
         top: 14px!important;
-        right: -36px; 
+        right: -36px!important; 
     }
     .edit-one {
         position: relative!important;
         top: 14px!important;
-        right: -50px;
+        right: -50px!important;
         color:#FF7622!important;
     }
     .button-back {
@@ -91,72 +93,45 @@
     .cart-description {
         position: relative!important;
         top: -24px!important;
-        right: -44px;
-        font-size: 20px;
-    }
-    .cart-wrapper {
-      display: grid;
-      grid-gap: 1em;
-      grid-template-areas:
-      "item_one"
-      "item_two"
+        right: -44px!important;
+        font-size: 20px!important;
     }
     .card-route {
       position: relative!important;
       top: 128px!important;
-      right: 0px;
+      right: 0px!important;
     }
     .card-footer {
       background-color: #FFFFFF!important;
       border-color: #FFFFFF!important;
     }
-    @media screen and (orientation:landscape) {
-      .magic {
-        position: relative!important;
-        top: -128px!important;
-        height: 74px;
-        border-top-left-radius: 1.2rem!important;
-        border-top-right-radius: 1.2rem!important;
-        background-color: rgba(235, 235, 235, 0.822);
-        width: 810px!important;
-        right: 15px!important;
-      }
-      .total {
-        position: relative!important;
-        top: 62px!important;
-      }
-      .cart-wrapper {
-        grid-template-columns: 50% auto;
-        grid-template-areas:
-        "item_one   item_two";
-      }
-      .button-login {
-        position: relative!important;
-        right: -444px!important;
-        height: 62px!important;
-        background-color: #FF7622!important;
-        color: #FFFFFF!important;
-        text-shadow: none!important;
-        top: -44px;
-        width: 338px!important;
-        border-radius: 12px!important;
-      }
-      .total {
-        position: relative!important;
-        top: 14px!important;
-      }
-      .edit-one {
-        position: relative!important;
-        top: 14px!important;
-        right: -264px;
-        color:#FF7622!important;
-      }
-      .cart-font {
-        position: relative!important;
-        top: 8px!important;
-        right: -16px;
-      }
+    .table-cart {
+      width: 60%!important;
+      position: relative!important;
+      top: -76px!important;
+      right: -158px!important;
     }
+    #icon-add {
+      width: 50%!important;
+      position: relative!important;
+      top: -80px!important;
+    }
+    .btn-primary {
+    color: #fff!important;
+    background-color: #FF7622!important;
+    border-color: #FF7622!important;
+    border-radius: 8%!important;
+    }  
+    .btn-danger {
+      width: 96%!important;
+      position: relative!important;
+      top: -63px!important;
+      right: 18px!important;
+      color: #fff!important;
+      background-color: #e9200b!important;
+      border-color: #FF7622!important;
+      border-radius: 0%!important;
+      } 
   </style>
   <body>
     <div class="p-1">
@@ -173,57 +148,19 @@
         </div>
         <br>
         <br>
-        <div class="cart-wrapper">
-          <div class="card space item_one">
-              <div class="row">
-                  <div class="col-4"><img class="card-img-top cart-image " src="../assets/foods/food3.jpeg" alt="Card image cap"></div>
-                  <div class="col-6"> <p class="card-text cart-font">Oven Fresh Chicken Pizza</p></div>
-                  <div class="col-6"> <p class="card-text cart-price"><b>RS 1500</b></p></div>
-              </div>
-          </div>
-          <div class="card space item_two">
-              <div class="row">
-                  <div class="col-4"><img class="card-img-top cart-image " src="../assets/foods/food4.jpeg" alt="Card image cap"></div>
-                  <div class="col-6"> <p class="card-text cart-font">Baked Spaghetti</p></div>
-                  <div class="col-6"> <p class="card-text cart-price"><b>RS 700</b></p></div>
-              </div>
-          </div>
-        </div>
     </div>
-
-
-
-    <div class="" id="cart" >
-  
-      <div class="">
-        <table class="show-cart table">
-          
-        </table>
-        <div>Total price: $<span class="total-cart"></span></div>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Order now</button>
-      </div>
-
-  </div> 
-
-
-
-
-
+    <div class="show-cart"></div>
     <div  data-role="footer" data-position="fixed" class="card-footer">
       <div class="position-fixed card-route" data-position="fixed">
         <div class="card magic" >
           <div class="card-body">
-            <label class="total">TOTAL &nbsp; <b> Rs 2200</b>  </label>    
+            <label class="total">TOTAL &nbsp; <b><span class="total-cart"></span></b></label>    
             <button type="button" class="btn btn-lg button-login" onclick="location.href='../payment/payment.html'">PLACE ORDER</button>
           </div> 
         </div>  
     </div>
   </body>
 </html>
-
 <script src="../payment/cart.js"></script>
 
 

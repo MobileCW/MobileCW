@@ -159,16 +159,26 @@ var shoppingCart = (function() {
     var cartArray = shoppingCart.listCart();
     var output = "";
     for(var i in cartArray) {
-      output += "<tr>"
-        + "<td>" + cartArray[i].name + "</td>" 
-        + "<td>(" + cartArray[i].price + ")</td>"
-        + "<td><div class='input-group'><button class='minus-item input-group-addon btn btn-primary' data-name=" + cartArray[i].name + ">-</button>"
-        + "<input type='number' class='item-count form-control' data-name='" + cartArray[i].name + "' value='" + cartArray[i].count + "'>"
-        + "<button class='plus-item btn btn-primary input-group-addon' data-name=" + cartArray[i].name + ">+</button></div></td>"
-        + "<td><button class='delete-item btn btn-danger' data-name=" + cartArray[i].name + ">X</button></td>"
-        + " = " 
-        + "<td>" + cartArray[i].total + "</td>" 
-        +  "</tr>";
+      output +=
+        "<div class='card space'>"+
+          "<div class='row'>"+
+             " <div class='col-4'><img class='card-img-top cart-image ' src='../assets/foods/food3.jpeg' alt='Card image cap'></div>"+
+              "<div class='col-6'> <p class='card-text cart-font'>"+cartArray[i].name+"</p></div>"+
+             " <div class='col-6'> <p class='card-text cart-price'><b>"+cartArray[i].price+"</b></p></div>"+
+             "<table class='table table-cart'>"+
+              "<thead>"+
+                "<tr>"+
+                  "<th scope='col'><div class=''><button  class='minus-item input-group-addon btn btn-primary' data-name=" + cartArray[i].name + "><i class='fas fa-minus-circle'></i></button></th>"+
+                  "<th scope='col'><input type='number' class='item-count form-control' data-name='" + cartArray[i].name + "' value='" + cartArray[i].count + "'></th>"+
+                  "<th scope='col'><button class='plus-item btn btn-primary input-group-addon' data-name=" + cartArray[i].name + "><i class='fas fa-plus-circle'></i></button></th>"+
+                  "<th scope='col'><button class='delete-item btn btn-danger' data-name=" + cartArray[i].name + "><i class='fas fa-trash-alt'></i></button></th>"+
+                "</tr>"+
+              "</thead>"+
+            "</table>"+
+            
+         " </div>"+
+        "</div>";
+
 
     }
     $('.show-cart').html(output);
@@ -205,6 +215,7 @@ var shoppingCart = (function() {
     shoppingCart.setCountForItem(name, count);
     displayCart();
   });
-  
+
+
   displayCart();
   
