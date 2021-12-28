@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>FoodMunch</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="../libraries/jquery.mobile-1.4.5.min.css" />
+    <script src="../libraries/jquery-1.11.3.min.js"></script>
+    <script src="../libraries/jquery.mobile-1.4.5.min.js"></script>
+    <link rel="stylesheet" href="../libraries/themes/foodMunchTheme.min.css" />
+    <link rel="stylesheet" href="../libraries/themes/jquery.mobile.icons.min.css" />
+    <link rel="stylesheet" href="../styles/common.css" />
+    <script src="https://kit.fontawesome.com/2458e99c54.js" crossorigin="anonymous"></script>
+  </head>
+  <style>
+    .magic {
+      position: relative!important;
+      top: -128px!important;
+      height: 235px;
+      border-top-left-radius: 1.2rem!important;
+      border-top-right-radius: 1.2rem!important;
+      background-color: rgba(235, 235, 235, 0.822);
+      width: 374px!important;
+      right: 15px!important;
+    }
+    .total {
+      position: relative!important;
+      top: 38px;
+    }
+    .address {
+      height: 45px;
+      width: 212px;
+      top: 18px;
+      right: 14px;
+    }
+    .edit {
+      left: 108px;
+      top: 18px;
+      color:#FF7622!important;
+    }
+    .space {
+      border: none!important;
+    }
+    .con-style {
+        width: 10px;
+        height: 10px;
+    }
+    .cart-image{
+        position: relative!important;
+        width: 339px;
+        height: 202px;
+        border-radius: 28px!important;
+        top: -42px;
+        right: -10px;
+
+    }
+    .cart-font {
+        position: relative!important;
+        top: 168px!important;
+        right: 113px;
+        width: 272px;
+        font-size: 20px;
+    }
+    .cart-price {
+        position: relative!important;
+        top: -62px!important;
+        right: -158px;
+    }
+    .cart-one {
+        position: relative!important;
+        top: 14px!important;
+        right: -36px; 
+    }
+    .edit-one {
+        position: relative!important;
+        top: 14px!important;
+        right: -50px;
+        color:#FF7622!important;
+    }
+    .button-back {
+        position: relative!important;
+        top: 10px!important;
+        right: -4px!important;
+    }
+    .cart-description {
+        position: relative!important;
+        top: -24px!important;
+        right: -44px;
+        font-size: 20px;
+    }
+    .cart-wrapper {
+      display: grid;
+      grid-gap: 1em;
+      grid-template-areas:
+      "item_one"
+      "item_two"
+    }
+    .card-route {
+      position: relative!important;
+      top: 128px!important;
+      right: 0px;
+    }
+    .card-footer {
+      background-color: #FFFFFF!important;
+      border-color: #FFFFFF!important;
+    }
+    .cart-font-type {
+        position: relative!important;
+        top: 1px!important;
+        right: -19px!important;
+        width: 351px!important;
+        font-size: 15px!important;
+        color: gray!important;
+    }
+    .mat-map {
+        position: relative!important;
+        top: 30px!important;
+        right: 5px!important;
+        width: 268px!important;
+        font-size: 15px!important;
+        color: gray!important;
+    }
+    .cart-map {
+        position: relative!important;
+        top: -4px!important;
+        right: -24px!important;
+    }
+    .man-image {
+        position: relative!important;
+        top: -2px!important;
+        right: -23px!important;
+        height: 30px!important;
+        width: 30px!important;
+
+    }
+    .map-video {
+        width: 138px!important;
+        position: relative!important;
+        top: -46px!important;
+        right: -212px!important;
+        height: 88px!important;
+    }
+    .btn-primary {
+      position: relative!important;
+      right: -76px!important;
+      height: 38px!important;
+      background-color: #FF7622!important;
+      color: #FFFFFF!important;
+      text-shadow: none!important;
+      top: -13px;
+      width: 186px!important;
+      border-radius: 12px!important;
+      border-color: #FF7622!important;
+    }
+@media screen and (orientation:landscape) {
+      .magic {
+        position: relative!important;
+        top: -128px!important;
+        height: 74px;
+        border-top-left-radius: 1.2rem!important;
+        border-top-right-radius: 1.2rem!important;
+        background-color: rgba(235, 235, 235, 0.822);
+        width: 810px!important;
+        right: 15px!important;
+      }
+      .total {
+        position: relative!important;
+        top: 62px!important;
+      }
+      .cart-wrapper {
+        grid-template-columns: 50% auto;
+        grid-template-areas:
+        "item_one   item_two";
+      }
+      .button-login {
+        position: relative!important;
+        right: -444px!important;
+        height: 62px!important;
+        background-color: #FF7622!important;
+        color: #FFFFFF!important;
+        text-shadow: none!important;
+        top: -44px;
+        width: 338px!important;
+        border-radius: 12px!important;
+      }
+      .total {
+        position: relative!important;
+        top: 14px!important;
+      }
+      .edit-one {
+        position: relative!important;
+        top: 14px!important;
+        right: -264px;
+        color:#FF7622!important;
+      }
+      .cart-font {
+        position: relative!important;
+        top: 8px!important;
+        right: -16px;
+      }
+    }
+  </style>
+  <body>
+    <div class="p-1">
+        <div class="ui-grid-a">
+          <div class="ui-block-a">
+              <label for="text-basic">
+                <div class="ui-alt-icon">
+                  <a href="home.html" target="_self" class="ui-btn ui-shadow ui-corner-all ui-icon-carat-l ui-btn-icon-notext ui-btn-inline button-back">Cart</a>
+                  <div class="cart-description">Cart</div>
+                </div>
+              </label>
+          </div>
+          <div class="ui-block-b"><div class="ui-bar ui-bar edit-one">EDIT ITEMS</div></div>
+        </div>
+        <br>
+        <br>
+        <div class="cart-wrapper">
+          <div class="card space item_one">
+              <div class="row">
+                  <div class="col-4"><img class="card-img-top cart-image " src="../assets/foods/food3.jpeg" alt="Card image cap"></div>
+                  <div class="col-6"> <p class="card-text cart-font">Chicken-Pizza</p></div>
+                  <div class="col-6"> <p class="card-text cart-font-type">Our dough is made fresh several times daily and topped with the finest ingredients.Chose your topping from Chicken.</p></div>
+              </div>
+          </div>
+        </div>
+        <div class="ui-grid-c" > 
+            <div class="ui-block-a">
+                <img src="../assets/icons/icon12.png" alt="Cart" class="man-image" />
+            </div>
+            <div class="ui-block-b">
+                <img src="../assets/icons/icon13.jpg" alt="Cart"  class="man-image" />
+            </div>
+            <div class="ui-block-c">
+                <img src="../assets/icons/icon14.png" alt="Cart"  class="man-image" />
+            </div>
+        </div>
+        <div class="ui-grid-d mat-map" >
+            <div class="ui-block-a">
+              <p class="card-text  cart-map" style="padding-top: 24px;">SIZE</p>
+            </div>
+            <div class="ui-block-b">
+              <button class="card-text categories" style="background-color:#FF7622; color: white; border-radius: 40px; width: 44px; height: 44px; margin: 5px;">S</button>
+            </div>
+            <div class="ui-block-c">
+              <button class="card-text categories" style="background-color:white; border-radius: 40px; width: 45px; height: 44px; margin: 5px;">M</button>
+            </div>
+            <div class="ui-block-d">
+              <button class="card-text categories" style="background-color:white; border-radius: 40px; width: 44px; height: 44px; margin: 5px;">L</button>
+            </div>
+        </div>
+        <img class="map-video" src="../assets/icons/icon15.png" alt="Card image cap"/>
+    </div>
+    <div  data-role="footer" data-position="fixed" class="card-footer">
+      <div class="position-fixed card-route" data-position="fixed">
+        <div class="card magic" >
+          <div class="card-body">
+            <!-- <label class="total">TOTAL &nbsp; <b> Rs 2200</b>  </label> -->
+            <a type="button" class="btn " onclick="location.href='cart-payment.html'">Cart (<span class="total-count"></span>)</a>
+            <button class="clear-cart btn btn-danger">Clear Cart</button></div>  
+            <a  href="#" class="add-to-cart btn btn-primary" data-name="Chicken-Pizza" data-price="1500"><b>ADD TO CART</b></a>
+            <br>
+            <a  onclick="location.href='cart-payment.html'" class="add-to-cart btn btn-primary" data-name="Chicken-Pizza" data-price="1500"><b>VIEW CART</b></a> 
+
+            <button type="button" class=" add-to-cart btn btn-primary" onclick="location.href='cart-payment.html'">
+              VIEW CART <span class="badge badge-light"><span class="total-count"></span></span>
+              <span class="sr-only">unread messages</span>
+            </button>
+
+          </div> 
+        </div>  
+    </div>
+  </body>
+</html>
+<script src="../payment/cart.js"></script>
+
+
+
+
+
+
+
