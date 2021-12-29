@@ -28,7 +28,7 @@
     }
     .total {
       position: relative!important;
-      top: 38px;
+      top: 19px;
     }
     .address {
       height: 45px;
@@ -145,15 +145,51 @@
     }
     .btn-primary {
       position: relative!important;
-      right: -76px!important;
+      right: -42px!important;
       height: 38px!important;
       background-color: #FF7622!important;
       color: #FFFFFF!important;
       text-shadow: none!important;
-      top: -13px;
-      width: 186px!important;
+      top: 44px;
+      width: 258px!important;
       border-radius: 12px!important;
       border-color: #FF7622!important;
+    }
+    .btn-primary2 {
+      position: relative!important;
+      right: -42px!important;
+      height: 38px!important;
+      background-color: #17c247!important;
+      color: #FFFFFF!important;
+      text-shadow: none!important;
+      top: 64px;
+      width: 258px!important;
+      border-radius: 12px!important;
+      border-color: #27c21f!important;
+    }
+    .top {
+      background-color: #ff0700!important;
+      color: white!important;
+      border-radius: 40px!important;
+      border-top-left-radius: 40px !important;
+      border-top-right-radius: 40px !important;
+      border-bottom-right-radius: 40px !important;
+      border-bottom-left-radius: 40px !important;
+      width: 42px!important;
+      height: 40px!important;
+      margin: 5px!important;
+      margin-top: 5px !important;
+      margin-right: 5px !important;
+      margin-bottom: 5px !important;
+      margin-left: 5px !important;
+      top: -53px!important;
+      right: -124px!important;
+    } 
+    .edit-two {
+      position: relative!important;
+      top: -16px!important;
+      right: -198px;
+      color: #ff240d!important;
     }
 @media screen and (orientation:landscape) {
       .magic {
@@ -258,17 +294,11 @@
       <div class="position-fixed card-route" data-position="fixed">
         <div class="card magic" >
           <div class="card-body">
-            <!-- <label class="total">TOTAL &nbsp; <b> Rs 2200</b>  </label> -->
-            <a type="button" class="btn " onclick="location.href='cart-payment.html'">Cart (<span class="total-count"></span>)</a>
-            <button class="clear-cart btn btn-danger">Clear Cart</button></div>  
+            <label class="total">PRICE &nbsp; <b> Rs 1500</b>  </label>
+            <div class="ui-block-b"><div  type="button" class="clear-cart ui-bar ui-bar edit-two"><i class="fas fa-trash-alt"></i></i></i>CLEAR CART</div></div>
             <a  href="#" class="add-to-cart btn btn-primary" data-name="Chicken-Pizza" data-price="1500"><b>ADD TO CART</b></a>
             <br>
-            <a  onclick="location.href='cart-payment.html'" class="add-to-cart btn btn-primary" data-name="Chicken-Pizza" data-price="1500"><b>VIEW CART</b></a> 
-
-            <button type="button" class=" add-to-cart btn btn-primary" onclick="location.href='cart-payment.html'">
-              VIEW CART <span class="badge badge-light"><span class="total-count"></span></span>
-              <span class="sr-only">unread messages</span>
-            </button>
+            <a  onclick="location.href='cart-payment.html'" class="btn btn-primary2" ><b>VIEW CART & ORDER <button class="top"><span class="total-count"></span></button></b></a> 
 
           </div> 
         </div>  
