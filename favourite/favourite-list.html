@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Your Favourites</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="../libraries/jquery.mobile-1.4.5.min.css" />
+    <script src="../libraries/jquery-1.11.3.min.js"></script>
+    <script src="../libraries/jquery.mobile-1.4.5.min.js"></script>
+    <link rel="stylesheet" href="../libraries/themes/foodMunchTheme.min.css" />
+    <link rel="stylesheet" href="../libraries/themes/jquery.mobile.icons.min.css" />
+    <link rel="stylesheet" href="../styles/common.css" />
+    <script src="https://kit.fontawesome.com/2458e99c54.js" crossorigin="anonymous"></script>
+    <style>
+        /* Header Styles */
+        .ui-header {
+            font-family: 'Montserrat', sans-serif;
+            background-color: #AA282A;
+            font-size: 20px;
+            height: 55px;
+            color: white;
+            text-shadow: none;
+        }    
+        [data-role=header] #header-menu-icon {
+            display: inline-block;
+            position: absolute;
+            left: 8px;
+            top: 8px;
+        }   
+        .ui-header .ui-title {
+            margin-right: 10%;
+            margin-left: 10%;
+        }
+        /* End of Header Styles */ 
+        body,
+        ui-grid-a,
+        ui-grid-b {
+            background-color: #ffffff;
+        }
+        .ui-content {
+            border-width: 1px;
+            overflow: visible;
+            overflow-x: hidden;
+            padding: 0.5em;
+            background-color: #ffffff;
+        }    
+        .ui-btn.ui-input-btn.ui-corner-all.ui-shadow {
+            font-family: 'PT Sans', sans-serif;
+            background-color: #AA282A;
+            color: white;
+            text-shadow: none;
+            font-size: 22px;
+            border-radius: 15px;
+            margin-top: 50px;
+            margin-left: 1em;
+            margin-right: 1em;
+        }
+        .ui-page {
+            background: #ffffff;
+        }
+        .ui-bar,
+        .ui-body {
+            position: relative !important;
+            padding: .4em .4em !important;
+            overflow: hidden !important;
+            display: block !important;
+            clear: both !important;
+        } 
+        .favHeart {
+            width: 25%;
+            float: right;
+        }
+        .space {
+            position: relative!important;
+            top: 8px!important;
+            right: -4px;
+            border: none!important;
+            width: 368px;
+        }
+        .cart-image{
+            width: 136px;
+            height: 118px;
+            border-radius: 28px!important;
+        }
+        .cart-font {
+            position: relative!important;
+            top: 10px!important;
+            right: -28px;
+        }
+        .cart-price {
+            position: relative!important;
+            top: -108px!important;
+            right: -292px;
+            font-family: fantasy;
+        }
+        .cart-rate {
+            position: relative!important;
+            top: -32px!important;
+            right: 38px;
+        }
+        .edit-one {
+            position: relative!important;
+            top: 42px!important;
+            right: -6px;
+            color: #FF7622!important;
+        }
+        .cart-description {
+            position: relative!important;
+            top: -34px!important;
+            right: -44px;
+            font-size: 20px;
+        }    
+    </style>
+</head>
+<body>
+  
+    <div class="p-1">
+        <div class="ui-grid-a">
+          <div class="ui-block-a">
+              <label for="text-basic">
+                <div class="ui-alt-icon">
+                  <a onclick="location.href='../home.html'" target="_self" class="ui-btn ui-shadow ui-corner-all ui-icon-carat-l ui-btn-icon-notext ui-btn-inline button-back">My Favourite</a>
+                <div class="cart-description">My Favourite</div>
+                </div>
+              </label>
+          </div>
+          <div class="ui-block-b"><div class="ui-bar ui-bar edit-one">SHARE FAVOURITES</div></div>
+        </div>
+        <div  class="ui-content" id="res01" >
+        <div class="card space item_one">
+            <div class="row">
+                <div class="col-4"><img class="card-img-top cart-image "  id="productImage1"  src="#" alt="Card image cap"></div>
+                <div class="col-6"> <p class="card-text cart-font" id="productName1"></p></div>
+                <div class="col-6"> <p class="card-text cart-price" id="productCost1"><b></b></p></div>
+                <div class="col-6"> <p class="card-text cart-rate" id="productRatings1"><b></b></p></div>
+            </div>
+            <div class="favHeart">
+                <a href="#" id="restaurant01" target="_self">
+                    <img id="fav" style="margin-top: 0px; margin-right: 5px" src="../assets/favourite/heartoutlineicon.png" width="26" height="26" align="right" />
+                    <img id="fav1" style="margin-top: -64px; margin-right: -248px" src="../assets/favourite/heartfillicon.png" width="26" height="26" align="right" />
+                </a>
+            </div>
+        </div>
+        </div>
+        <!-- <div data-rol="fieldcontain" id="btnSendEmail" class="ui-nodisc-icon">
+            <form method="post">
+                <input type="button" data-icon="email" data-iconpos="left" value="Send Email" onclick="sendEmail()">
+            </form>
+        </div> -->
+        </div>
+    </div>
+</div>
+<div data-role="footer" data-position="fixed">
+    <div data-role="header">
+      <div data-role="navbar" >
+        <ul>
+          <li><a href="" class="ui-btn-active border" target="_self" data-transition="slide"><img src="../assets/navBar/home.png" alt="Girl in a jacket" class="bar"></a></li>
+          <li><a href="#" class="border" target="_self" data-transition="slide"><img src="../assets/navBar/account.png" alt="Girl in a jacket" class="bar"></a></li>
+          <li><a href="cart.html" class="border" target="_self" data-transition="slide"><img src="../assets/navBar/cart.png" alt="Girl in a jacket" class="bar"></a></li>
+          <li><a href="#" class="border" target="_self" data-transition="slide"><img src="../assets/navBar/qr.png" alt="Girl in a jacket" class="bar"></a></li>
+        </ul>
+      </div>
+    </div> 
+  </div>
+</body>
+</html>
+
+<script type="text/javascript">
+    var favouritesList = JSON.parse(localStorage.getItem('favouriteList'));
+
+    console.log("start favourite list loading")
+    console.log(JSON.stringify(favouritesList));
+    $('#fav').hide();
+    var res01 = document.getElementById("res01");
+    var btnSendEmail = document.getElementById("btnSendEmail");
+
+    if (favouritesList != null && favouritesList.length != 0) {
+        if (favouritesList != null && favouritesList[0]) {
+            res01.style.display = "block";
+            document.getElementById("productImage1").src = favouritesList[0].productImage;
+            document.getElementById("productName1").innerHTML = favouritesList[0].productName;
+            document.getElementById("productCost1").innerHTML = favouritesList[0].productCost;
+            document.getElementById("productRatings1").innerHTML = favouritesList[0].productRatings;
+        } else {
+            res01.style.display = "none";
+        }
+    } else {
+        res01.style.display = "none";
+        btnSendEmail.style.display = "none";
+        localStorage.removeItem('favouriteList');
+        alert("no favourite list item")
+    }
+
+    $("#restaurant01").on('click', function(event) {
+        event.preventDefault();
+        for (i = 0; i < favouritesList.length; i++) {
+            if (favouritesList[i].productId == favouritesList[0].productId) {
+                var updatedFavList = favouritesList.filter(item => item.productId != favouritesList[0].productId);
+                favouritesList = updatedFavList;
+                localStorage.setItem('favouriteList', JSON.stringify(favouritesList));
+                res01.style.display = "none";
+                if (favouritesList.length == 0) {
+                    btnSendEmail.style.display = "none";
+                    localStorage.removeItem('favouriteList');
+                }
+            }
+        }
+    });
+</script>
+
