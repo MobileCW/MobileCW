@@ -1,4 +1,6 @@
 function sendEmail() {
+    var reciever=Form.reciever.value;
+    console.log(reciever)
 
     console.log("email button clicked");
     var favouritesList = JSON.parse(localStorage.getItem('favouriteList'));
@@ -8,7 +10,7 @@ function sendEmail() {
         Host: "smtp.gmail.com",
         Username: "foodmunchteam@gmail.com",
         Password: "foodmunch12",
-        To: 'ariyarathnathathsara88@gmail.com',
+        To: reciever,
         From: "foodmunchteam@gmail.com",
         Subject : "Favourite List ",
         Body : "<h1>Favourite Restaurant List</h1><br>"
