@@ -133,6 +133,12 @@
         left: -9px!important;
         top: 1px!important;
     }
+    input[name=comment] {
+        width: 100%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        box-sizing: border-box;
+    }
     @media screen and (orientation:landscape) {
         .edit {
             position: relative!important;
@@ -172,7 +178,17 @@
         position: relative!important;
         top: 0px!important;
         right: 36px;
-    }
+        }
+        input[name=comment] {
+            width: 100%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            box-sizing: border-box;
+        }
+        .io {
+            color: red;
+            font-size: 12px;
+        }
     }
   </style>
   <body>
@@ -193,14 +209,16 @@
         <div data-role="popup" id="popupLogin" data-theme="a" class="ui-corner-all">
             <div style="padding:10px 20px;">
                 <h3>ADD COMMENT</h3>
-                <form id="frm-comment" >
+                <form id="frm-comment" name="RegForm">
                     <div class="input-row">
                         <input type="hidden" name="comment_id" id="commentId" placeholder="Name" /> 
                         <input class="input-field" type="text" name="name" id="name" placeholder="Name" />
+                        <span id="demo-info" class="io"></span>
                     </div>
                     <div class="input-row">
-                        <textarea class="input-field" type="text" name="comment"
-                        id="comment" placeholder="Add a Comment">  </textarea>
+                        <input class="input-field" type="text" name="comment" 
+                        id="comment" placeholder="Add a Comment"/> 
+                        <span id="demo-info2" class="io"></span>
                     </div>
                     <div>
                         <input type="button" class="btn-submit" id="submitButton"

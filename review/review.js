@@ -1,8 +1,35 @@
+
+
+
 function postReply(commentId) {
     $('#commentId').val(commentId);
     $("#name").focus();
 }
+
 $("#submitButton").click(function () {
+    var name = document.forms["RegForm"]["name"];
+    var comment = document.forms["RegForm"]["comment"];
+    console.log(comment);
+
+    if (name.value == "") {
+        $('#demo-info').addClass("error");
+		$(".error").text("*required");
+        name.focus();
+        return false;
+    } else{
+        $('#demo-info').addClass("error");
+		$(".error").text("*required").hide();
+    }
+    if (comment.value == "") {
+        $('#demo-info2').addClass("error");
+		$(".error").text("*required");
+        comment.focus();
+        return false;
+    }  else{
+        $('#demo-info2').addClass("error");
+		$(".error").text("*required").hide();
+    }
+    
     $("#comment-message").css('display', 'none');
     var str = $("#frm-comment").serialize();
     $.ajax({
