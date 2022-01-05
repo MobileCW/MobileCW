@@ -4,18 +4,63 @@
     <title>QR Code Scanner</title>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="../libraries/jquery.mobile-1.4.5.min.css" />
+    <link rel="stylesheet" href="../libraries/themes/jquery.mobile.icons.min.css" />
+    <script src="https://kit.fontawesome.com/2458e99c54.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./src/style.css" />
     <script src="https://rawgit.com/sitepoint-editors/jsqrcode/master/src/qr_packed.js"></script>
   </head>
+  <style>
+    .color-font {
+      color: rgb(255, 255, 255);
+    }
+
+    .button-back {
+        position: relative!important;
+        top: 10px!important;
+        right: -4px!important;
+    }
+    .cart-description {
+        position: relative!important;
+        top: -24px!important;
+        right: -44px!important;
+        font-size: 20px!important;
+    }
+    .close {
+      position: relative!important;
+      top: 10px!important;
+      right: -14px!important;
+      color: #ffff!important;
+      line-height: 50px!important;
+      font-size: 28px!important;
+}
+
+
+  </style>
 
   <body>
+    <div class="ui-grid-a">
+      <div class="ui-block-a">
+          <label for="text-basic">
+            <div class="ui-alt-icon">
+              <a onclick="location.href='../home.html'" ><i class="far fa-times-circle close"></i></a>
+              <div class="cart-description color-font"></div>
+            </div>
+          </label>
+      </div>
+      <div class="ui-block-b"><div class="ui-bar ui-bar edit-one"></div></div>
+    </div>
+
+    
     <div id="container">
       <h1>QR Code Scanner</h1>
 
       <a id="btn-scan-qr">
         <img src="https://dab1nmslvvntp.cloudfront.net/wp-content/uploads/2017/07/1499401426qr_icon.svg">
-      <a/>
-
+      </a>
+      <!-- <h4 class="color-font">Your QR code is private.If you share it with someone they can scan it with their camera</h4> -->
+      
       <canvas hidden="" id="qr-canvas"></canvas>
 
       <div id="qr-result" hidden="">

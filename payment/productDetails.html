@@ -203,124 +203,170 @@
       color: #ff240d!important;
     }
 @media screen and (orientation:landscape) {
-      .magic {
-        position: relative!important;
-        top: -128px!important;
-        height: 74px;
-        border-top-left-radius: 1.2rem!important;
-        border-top-right-radius: 1.2rem!important;
-        background-color: rgba(235, 235, 235, 0.822);
-        width: 810px!important;
-        right: 15px!important;
-      }
-      .total {
-        position: relative!important;
-        top: 62px!important;
-      }
-      .cart-wrapper {
-        grid-template-columns: 50% auto;
-        grid-template-areas:
-        "item_one   item_two";
-      }
-      .button-login {
-        position: relative!important;
-        right: -444px!important;
-        height: 62px!important;
-        background-color: #FF7622!important;
-        color: #FFFFFF!important;
-        text-shadow: none!important;
-        top: -44px;
-        width: 338px!important;
-        border-radius: 12px!important;
-      }
-      .total {
-        position: relative!important;
-        top: 14px!important;
-      }
-      .edit-one {
-        position: relative!important;
-        top: 14px!important;
-        right: -264px;
-        color:#FF7622!important;
-      }
-      .cart-font {
-        position: relative!important;
-        top: 8px!important;
-        right: -16px;
-      }
+  .cart-font {
+    position: relative!important;
+    top: -54px!important;
+    right: -9px;
+    width: 272px;
+    font-size: 20px;
+  }
+  .cart-font-type {
+    position: relative!important;
+    top: -180px!important;
+    right: -288px!important;
+    width: 474px!important;
+    font-size: 15px!important;
+    color: gray!important;
+  }
+  .top-magic {
+    position: relative!important;
+    top: -188px!important;
+    right: -266px;
+    width: 378px;
+    font-size: 20px;
+  }
+  .magic {
+    position: relative!important;
+    top: -108px!important;
+    height: 128px;
+    border-top-left-radius: 1.2rem!important;
+    border-top-right-radius: 1.2rem!important;
+    background-color: rgba(235, 235, 235, 0.822);
+    width: 810px!important;
+    right: 15px!important;
+  }
+  .btn-primary2 {
+    position: relative!important;
+    right: -512px!important;
+    height: 38px!important;
+    background-color: #17c247!important;
+    color: #FFFFFF!important;
+    text-shadow: none!important;
+    top: -22px;
+    width: 258px!important;
+    border-radius: 12px!important;
+    border-color: #27c21f!important;
+  }
+  .btn-primary {
+    position: relative!important;
+    right: 150px!important;
+    height: 38px!important;
+    background-color: #FF7622!important;
+    color: #FFFFFF!important;
+    text-shadow: none!important;
+    top: 20px;
+    width: 258px!important;
+    border-radius: 12px!important;
+    border-color: #FF7622!important;
+  }
+  .edit-two {
+    position: relative!important;
+    top: -34px!important;
+    right: -609px;
+    color: #ff240d!important;
+  }
+  .total {
+    position: relative!important;
+    top: 2px;
+  }
+  .cart-image {
+    position: relative!important;
+    width: 261px;
+    height: 156px;
+    border-radius: 28px!important;
+    top: -60px;
+    right: -10px; 
+  }
+  .map-video {
+    width: 138px!important;
+    position: relative!important;
+    top: -272px!important;
+    right: -610px!important;
+    height: 88px!important;
+  }
+  .mat-map {
+    position: relative!important;
+    top: -190px!important;
+    right: -265px!important;
+    width: 268px!important;
+    font-size: 15px!important;
+    color: gray!important;
+  }
     }
   </style>
   <body>
-    <div class="p-1">
-        <div class="ui-grid-a">
-          <div class="ui-block-a">
-              <label for="text-basic">
-                <div class="ui-alt-icon">
-                  <a onclick="location.href='../home.html'" target="_self" class="ui-btn ui-shadow ui-corner-all ui-icon-carat-l ui-btn-icon-notext ui-btn-inline button-back">Product Details</a>
-                  <div class="cart-description">Product Details</div>
+    <div data-role="page" id="foo">
+      <div class="p-1">
+          <div class="ui-grid-a">
+            <div class="ui-block-a">
+                <label for="text-basic">
+                  <div class="ui-alt-icon">
+                    <a onclick="location.href='../resturantView.html'" target="_self" class="ui-btn ui-shadow ui-corner-all ui-icon-carat-l ui-btn-icon-notext ui-btn-inline button-back">Product Details</a>
+                    <div class="cart-description">Product Details</div>
+                  </div>
+                </label>
+            </div>
+            <div class="ui-block-b">
+              <div class="favHeart">
+                <a href="#" id="restaurant01" target="_self">
+                    <img id="fav" style="margin-top: 18px; margin-right: 36px" src="../assets/favourite/heartoutlineicon.png" width="26" height="26" align="right" />
+                    <img id="fav1" style="margin-top: 18px; margin-right: 36px" src="../assets/favourite/heartfillicon.png" width="26" height="26" align="right" />
+                </a>
+            </div>
+            </div>
+          </div>
+          <br>
+          <br>
+          <div class="cart-wrapper">
+            <div class="card space item_one">
+                <div class="row">
+                    <div class="col-4"><img class="card-img-top cart-image " src="../assets/foods/food9.jpg" alt="Card image cap"></div>
+                    <div class="col-6"> <p class="card-text cart-font">Chicken-Pizza</p></div>
+                    <div class="col-6"> <p class="card-text cart-font-type">Our dough is made fresh several times daily and topped with the finest ingredients.Chose your topping from Chicken.</p></div>
                 </div>
-              </label>
+            </div>
           </div>
-          <div class="ui-block-b">
-            <div class="favHeart">
-              <a href="#" id="restaurant01" target="_self">
-                  <img id="fav" style="margin-top: 18px; margin-right: 36px" src="../assets/favourite/heartoutlineicon.png" width="26" height="26" align="right" />
-                  <img id="fav1" style="margin-top: 18px; margin-right: 36px" src="../assets/favourite/heartfillicon.png" width="26" height="26" align="right" />
-              </a>
-          </div>
-          </div>
-        </div>
-        <br>
-        <br>
-        <div class="cart-wrapper">
-          <div class="card space item_one">
-              <div class="row">
-                  <div class="col-4"><img class="card-img-top cart-image " src="../assets/foods/food3.jpeg" alt="Card image cap"></div>
-                  <div class="col-6"> <p class="card-text cart-font">Chicken-Pizza</p></div>
-                  <div class="col-6"> <p class="card-text cart-font-type">Our dough is made fresh several times daily and topped with the finest ingredients.Chose your topping from Chicken.</p></div>
+          <div class="ui-grid-c top-magic" > 
+              <div class="ui-block-a">
+                  <img src="../assets/icons/icon12.png" alt="Cart" class="man-image" onclick="location.href='../review/review.html'"/>
+              </div>
+              <div class="ui-block-b">
+                  <img src="../assets/icons/icon13.jpg" alt="Cart"  class="man-image" />
+              </div>
+              <div class="ui-block-c">
+                  <img src="../assets/icons/icon14.png" alt="Cart"  class="man-image" />
               </div>
           </div>
-        </div>
-        <div class="ui-grid-c" > 
-            <div class="ui-block-a">
-                <img src="../assets/icons/icon12.png" alt="Cart" class="man-image" onclick="location.href='../review/review.html'"/>
-            </div>
-            <div class="ui-block-b">
-                <img src="../assets/icons/icon13.jpg" alt="Cart"  class="man-image" />
-            </div>
-            <div class="ui-block-c">
-                <img src="../assets/icons/icon14.png" alt="Cart"  class="man-image" />
-            </div>
-        </div>
-        <div class="ui-grid-d mat-map" >
-            <div class="ui-block-a">
-              <p class="card-text  cart-map" style="padding-top: 24px;">SIZE</p>
-            </div>
-            <div class="ui-block-b">
-              <button class="card-text categories" style="background-color:#FF7622; color: white; border-radius: 40px; width: 44px; height: 44px; margin: 5px;">S</button>
-            </div>
-            <div class="ui-block-c">
-              <button class="card-text categories" style="background-color:white; border-radius: 40px; width: 45px; height: 44px; margin: 5px;">M</button>
-            </div>
-            <div class="ui-block-d">
-              <button class="card-text categories" style="background-color:white; border-radius: 40px; width: 44px; height: 44px; margin: 5px;">L</button>
-            </div>
-        </div>
-        <img class="map-video" src="../assets/icons/icon15.png" alt="Card image cap"/>
+          <div class="ui-grid-d mat-map" >
+              <div class="ui-block-a">
+                <p class="card-text  cart-map" style="padding-top: 24px;">SIZE</p>
+              </div>
+              <div class="ui-block-b">
+                <button class="card-text categories" style="background-color:#FF7622; color: white; border-radius: 40px; width: 44px; height: 44px; margin: 5px;">S</button>
+              </div>
+              <div class="ui-block-c">
+                <button class="card-text categories" style="background-color:white; border-radius: 40px; width: 45px; height: 44px; margin: 5px;">M</button>
+              </div>
+              <div class="ui-block-d">
+                <button class="card-text categories" style="background-color:white; border-radius: 40px; width: 44px; height: 44px; margin: 5px;">L</button>
+              </div>
+          </div>
+          <img class="map-video" src="../assets/icons/icon15.png" alt="Card image cap"/>
     </div>
-    <div  data-role="footer" data-position="fixed" class="card-footer">
-      <div class="position-fixed card-route" data-position="fixed">
-        <div class="card magic" >
-          <div class="card-body">
-            <label class="total">PRICE &nbsp; <b> Rs 1500</b>  </label>
-            <div class="ui-block-b"><div  type="button" class="clear-cart ui-bar ui-bar edit-two"><i class="fas fa-trash-alt"></i></i></i>CLEAR CART</div></div>
-            <a  href="#" class="add-to-cart btn btn-primary" data-name="Chicken-Pizza" data-price="1500"><b>ADD TO CART</b></a>
-            <br>
-            <a  onclick="location.href='cart-payment.html'" class="btn btn-primary2" ><b>VIEW CART & ORDER <button class="top"><span class="total-count"></span></button></b></a> 
+      <div  data-role="footer" data-position="fixed" class="card-footer">
+        <div class="position-fixed card-route" data-position="fixed">
+          <div class="card magic" >
+            <div class="card-body">
+              <label class="total">PRICE &nbsp; <b> Rs 1500</b>  </label>
+              <div class="ui-block-b"><div  type="button" class="clear-cart ui-bar ui-bar edit-two"><i class="fas fa-trash-alt"></i></i></i>CLEAR CART</div></div>
+              <a  href="#" class="add-to-cart btn btn-primary" data-name="Chicken-Pizza" data-price="1500"><b>ADD TO CART</b></a>
+              <br>
+              <a  onclick="location.href='cart-payment.html'" class="btn btn-primary2" ><b>VIEW CART & ORDER <button class="top"><span class="total-count"></span></button></b></a> 
 
-          </div> 
-        </div>  
-    </div>
+            </div> 
+          </div>  
+      </div>
+  </div>
   </body>
 </html>
 <script src="../payment/cart.js"></script>
