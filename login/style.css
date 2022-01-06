@@ -95,10 +95,14 @@ img#loaderId {
 }
 
 .dashboard {
-    text-align: left;    background: #f9f9f9;
-    border: #ececec 1px solid;
+    text-align: left;
+    background: #ffffff;
+    border: none;
     padding: 10px 20px;
-    border-radius: 3px;
+    border-radius: 20px;
+    position: relative;
+    left: 1px;
+    top: 340px;
 }
 .thank-you-registration {
     display:none;   
@@ -109,3 +113,24 @@ img#loaderId {
     border-radius: 3px;
     border: #a9d4b9 1px solid;
 }
+.btn-home{
+    position: relative!important;
+    right: -28px!important;
+    height: 38px!important;
+    background-color: #FF7622!important;
+    color: #FFFFFF!important;
+    text-shadow: none!important;
+    top: 5px;
+    width: 258px!important;
+    border-radius: 12px!important;
+    border-color: #FF7622!important;
+  }
+
+  .log{
+    position: relative!important;
+    right: -60px!important;
+    height: 38px!important;
+    font-size: 20px;
+
+    
+  }

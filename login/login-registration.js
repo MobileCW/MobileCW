@@ -92,7 +92,7 @@ function ajaxRegistration() {
 				} else {
 					$(".thank-you-registration").show();
 					$(".thank-you-registration").text(response);
-					window.location.href ="../home.html";
+					window.location.href ="index.php";
 					
 				
 				}
@@ -139,11 +139,12 @@ function ajaxLogin() {
 							"Invalid Attempt. Try Again.");
 					$('#login-error-message').show();
 				} else {
-					$('.demo-container').html(response);
-					window.location.href ="../home.html";
+					$('.lo-container').html(response);
 					
 				}
 			}
 		});
 	}// endif
 }
+
+

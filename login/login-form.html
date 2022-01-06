@@ -80,6 +80,9 @@
       color: aliceblue;
       font-style: normal!important;
     }
+    .message {
+      color: red!important;
+    }
   </style>
   <body>
     <img src="../assets/icons/icon6.png" alt="Girl in a jacket" class="logo">
@@ -89,14 +92,12 @@
         <div class="card-body">
             <form id="login-form" action="" method="post" role="form">
                 <div class="input-row">
-                    <span id="email-info"></span> <input type="email"
-                        name="login-email-id" id="login-email-id"
-                        class="input-field" placeholder="Email ID">
+                    <input type="email" name="login-email-id" id="login-email-id"class="input-field" placeholder="Email ID"/>
+                    <span id="email-info" class="message"></span> 
                 </div>
                 <div class="input-row">
-                    <span id="password-info"></span> <input type="password"
-                        name="login-password" id="login-password"
-                        class="input-field" placeholder="Password">
+                    <input type="password" name="login-password" id="login-password"class="input-field" placeholder="Password"/>
+                    <span id="password-info" class="message"></span> 
                 </div>
 
                 <button type="button" class="btn btn-lg button-login"  onclick="ajaxLogin()">SIGN IN</button>

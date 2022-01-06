@@ -75,8 +75,8 @@
     }
     .btn-submit {
         padding: 10px 20px;
-        background: #333;
-        border: #1d1d1d 1px solid;
+        background: #FF7622!important;
+        border: #FF7622!important;
         color: #ffffff;
         font-size: 0.9em;
         width: 100px;
@@ -208,11 +208,11 @@
         <br>
         <div data-role="popup" id="popupLogin" data-theme="a" class="ui-corner-all">
             <div style="padding:10px 20px;">
-                <h3>ADD COMMENT</h3>
+                <h3>How was your experience with us ?</h3>
                 <form id="frm-comment" name="RegForm">
                     <div class="input-row">
                         <input type="hidden" name="comment_id" id="commentId" placeholder="Name" /> 
-                        <input class="input-field" type="text" name="name" id="name" placeholder="Name" />
+                        <input class="input-field" type="hidden" name="name" id="name" placeholder="Name"   />
                         <span id="demo-info" class="io"></span>
                     </div>
                     <div class="input-row">
@@ -248,3 +248,7 @@
 </html>
 <script src="review.js"></script>
 
+<script>
+    var x = localStorage.getItem("userName");
+    document.getElementById("name").value = x;
+</script>

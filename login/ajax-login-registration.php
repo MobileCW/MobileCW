@@ -57,7 +57,7 @@ if (isset($_POST['action']) && $_POST['action'] == 'login') {
     $selectQuery->execute();
     
     $result = $selectQuery->get_result();
-    
+
     if ($result->num_rows > 0) {
         while ($row = $result->fetch_assoc()) {
             $_SESSION['username'] = $row['first_name'] . " " . $row['last_name'];
@@ -73,3 +73,4 @@ else {
     echo $error_message;
 }
 ?>
+
