@@ -87,6 +87,47 @@
             width: 24px!important;
             height: 24px!important;
         }
+        .wrapper {
+            display: grid;
+            grid-gap: 1em;
+            grid-template-areas:
+            "grid_one"
+            "grid_two"
+            "grid_three"
+            "grid_four"
+        }
+        @media screen and (orientation:landscape) {
+            .pen {
+                height: 170px;
+                border-radius: 1.3rem!important;
+                width: 318px;
+            }
+            .rechange {
+                padding: 18.8px 0.4rem!important;
+                position: relative!important;
+                left: 326px!important;
+                top: -180px!important;
+                width: 468px;
+            }
+            .c-plus {
+                position: relative!important;
+                left: 0px!important;
+                top: -122px!important;
+            }
+            .wrapper {
+                grid-template-columns: 50% auto;
+                grid-template-areas:
+                "grid_one   grid_two grid_three  grid_four";
+                position: relative!important;
+                left: 2px!important;
+                top: -118px!important;
+            }
+            .one {
+                padding: 6px!important;
+                width: 142px!important;
+                padding-top: -65px!important;
+            }
+        }
         
     </style>
 </head>
@@ -112,7 +153,8 @@
             <p class="card-text font">A restaurant is generally an establishment where the public may obtain meals or refreshments. and broths served within.</p>
         </div>
         </div>
-        <div class="ui-grid-c">
+        
+        <div class="ui-grid-c c-plus">
             <div class="ui-block-a one">
                 <button class="card-text categories round" >Pizza</button>
             </div>
@@ -122,9 +164,22 @@
             <div class="ui-block-c one">
                 <button class="card-text categories round-select" >Pasta</button>
             </div>
+            <!-- <div class="ui-block-c one">
+                <button class="card-text categories round-select" >Burger</button>
+            </div>
+            <div class="ui-block-c one">
+                <button class="card-text categories round-select" >Drinks</button>
+            </div>
+            <div class="ui-block-c one">
+                <button class="card-text categories round-select" >Parata</button>
+            </div>
+            <div class="ui-block-c one">
+                <button class="card-text categories round-select" >Biscuit</button>
+            </div> -->
         </div>
+        <div class="wrapper">
         <div class="row">
-            <div class="col">
+            <div class="col grid_one">
                 <div class="horizontal-width" onclick="location.href='payment/productDetails.html'">
                 <div class="card border-change pen " >
                     <img class="card-img-top pen-to" src="assets/foods/food9.jpg" alt="Card image cap">
@@ -134,7 +189,7 @@
                 </div>
                 </div>
             </div>
-            <div class="col">
+            <div class="col grid_two">
                 <div class="horizontal-width" onclick="location.href='payment/productDetails.html'">
                 <div class="card border-change pen " >
                     <img class="card-img-top pen-to" src="assets/foods/food6.jpg" alt="Card image cap">
@@ -147,7 +202,7 @@
         </div>
         <br>
         <div class="row">
-            <div class="col">
+            <div class="col grid_three">
                 <div class="horizontal-width">
                 <div class="card border-change pen " >
                     <img class="card-img-top pen-to" src="assets/foods/food7.jpg" alt="Card image cap">
@@ -157,7 +212,7 @@
                 </div>
                 </div>
             </div>
-            <div class="col">
+            <div class="col grid_four">
                 <div class="horizontal-width">
                 <div class="card border-change pen " >
                     <img class="card-img-top pen-to" src="assets/foods/food8.jpg" alt="Card image cap">
@@ -168,14 +223,15 @@
                 </div>
             </div>
         </div>
-        <br>
+        </div>
+      
     </div>
 <div data-role="footer" data-position="fixed">
     <div data-role="header">
       <div data-role="navbar" >
         <ul>
-          <li><a href="" class="ui-btn-active border" target="_self" data-transition="slide"><img src="assets/navBar/home.png" alt="Girl in a jacket" class="bar"></a></li>
-          <li><a href="#" class="border" target="_self" data-transition="slide"><img src="assets/navBar/account.png" alt="Girl in a jacket" class="bar"></a></li>
+          <li><a href="home.html" class="ui-btn-active border" target="_self" data-transition="slide"><img src="assets/navBar/home.png" alt="Girl in a jacket" class="bar"></a></li>
+          <li><a href="profile.html" class="border" target="_self" data-transition="slide"><img src="assets/navBar/account.png" alt="Girl in a jacket" class="bar"></a></li>
           <li><a href="cart.html" class="border" target="_self" data-transition="slide"><img src="assets/navBar/cart.png" alt="Girl in a jacket" class="bar"></a></li>
           <li><a href="#" class="border" target="_self" data-transition="slide"><img src="assets/navBar/qr.png" alt="Girl in a jacket" class="bar"></a></li>
         </ul>

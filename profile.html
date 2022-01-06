@@ -146,21 +146,56 @@
         align-items: center;
         text-align: center;
     }
-    .table_design {
-        
+    .card {
+        position: relative!important;
+        display: flex!important;
+        flex-direction: column!important;
+        min-width: 0!important;
+        word-wrap: break-word;
+        /* background-color: #fff; */
+        background-clip: border-box!important;
+        border: none!important; 
+        border-radius: 0.25rem!important;
     }
-    
+    .button-back {
+        position: relative!important;
+        top: 10px!important;
+        right: -10px!important;
+    }
+    .to {
+        position: relative!important;
+        top: 0px!important;
+        right: -128px!important;
+        border: none!important;
+        border-radius: 0.25rem!important;
+    }
+    @media screen and (orientation:landscape) {
+        .to {
+            position: relative!important;
+            top: 0px!important;
+            right: -290px!important;
+            border: none!important;
+            border-radius: 0.25rem!important;
+        }
+    }
 </style>
 
 <body>
+    <label for="text-basic">
+        <div class="ui-alt-icon">
+          <a href="home.html" target="_self" class="ui-btn ui-shadow ui-corner-all ui-icon-carat-l ui-btn-icon-notext ui-btn-inline button-back">Cart</a>
+          <div class="cart-description">Profile</div>
+        </div>
+      </label>
+
     <div class="student-profile py-4">
         <div class="container">
             <div class="row">
-                <div class="col-lg-4">
+                <div class="col-lg-4 ">
                     <div class="card shadow-sm">
                         <div class="card-header bg-transparent text-center">
-                            <img class="profile_img" src="assets/profile/profile_icon.png" alt="student dp">
-                            <h3>Theja Perera</h3>
+                            <img class="profile_img" src="assets/profile/t.png" alt="student dp">
+                            <input class="to" id="profile"></input>
                         </div>
                         <div class="card-body">
                             <p class="mb-0"><strong class="pr-1">I love Fast Food</strong></p>
@@ -176,7 +211,7 @@
                                     <th width="30%"><img class="profile_img" src="assets/profile/call.png" alt="student dp"></th>                               
                                     <td>
                                         FULL NAME<br>
-                                        Inura Wickramanayake
+                                        Aari Lost
                                     </td>
                                 </tr>
                                 <tr>
@@ -220,10 +255,10 @@
                 <div data-role="header">
                   <div data-role="navbar" >
                     <ul>
-                      <li><a href="#" class="ui-btn-active border" target="_self" data-transition="slide"><img src="assets/navBar/home.png" alt="Girl in a jacket" class="bar"></a></li>
+                      <li><a href="home.html" class="ui-btn-active border" target="_self" data-transition="slide"><img src="assets/navBar/home.png" alt="Girl in a jacket" class="bar"></a></li>
                       <li><a href="profile.html" class="border" target="_self" data-transition="slide"><img src="assets/navBar/account.png" alt="Girl in a jacket" class="bar"></a></li>
                       <li><a href="cart.html" class="border" target="_self" data-transition="slide"><img src="assets/navBar/cart.png" alt="Girl in a jacket" class="bar"></a></li>
-                      <li><a href="#" class="border" target="_self" data-transition="slide"><img src="assets/navBar/qr.png" alt="Girl in a jacket" class="bar"></a></li>
+                      <li><a href=".qr/index.html" class="border" target="_self" data-transition="slide"><img src="assets/navBar/qr.png" alt="Girl in a jacket" class="bar"></a></li>
                     </ul>
                   </div>
                 </div> 
@@ -231,5 +266,12 @@
         </div>
     </div>
 </body>
-
 </html>
+
+
+
+
+<script>
+    var x = localStorage.getItem("userName");
+    document.getElementById("profile").value = x;
+</script>

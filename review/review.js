@@ -11,15 +11,6 @@ $("#submitButton").click(function () {
     var comment = document.forms["RegForm"]["comment"];
     console.log(comment);
 
-    if (name.value == "") {
-        $('#demo-info').addClass("error");
-		$(".error").text("*required");
-        name.focus();
-        return false;
-    } else{
-        $('#demo-info').addClass("error");
-		$(".error").text("*required").hide();
-    }
     if (comment.value == "") {
         $('#demo-info2').addClass("error");
 		$(".error").text("*required");

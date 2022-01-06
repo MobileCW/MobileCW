@@ -77,6 +77,9 @@
       color: aliceblue!important;
       font-style: normal!important;
     }
+    .message {
+      color: red!important;
+    }
   </style>
   <body>
       <img src="../assets/icons/icon6.png" alt="Girl in a jacket" class="logo">
@@ -87,36 +90,28 @@
 
         <form>
             <div class="input-row">
-                <input type="text"
-                    name="first-name" id="first-name" class="input-field"
-                    placeholder="First Name" value="">
+                <input type="text" name="first-name" id="first-name" class="input-field" placeholder="First Name" value="">
+                <span id="first-name-info" class="message"></span> 
             </div>
             <div class="input-row">
-                <input type="text"
-                    name="last-name" id="last-name" class="input-field"
-                    placeholder="Last Name" value="">
+                <input type="text" name="last-name" id="last-name" class="input-field" placeholder="Last Name" value="">
+                <span id="last-name-info" class="message"></span> 
             </div>
             <div class="input-row">
-                <input type="email"
-                    name="register-email-id" id="register-email-id"
-                    class="input-field" placeholder="Email ID" value="">
+                <input type="email" name="register-email-id" id="register-email-id" class="input-field" placeholder="Email ID" value="">
+                <span id="register-email-info" class="message"></span> 
             </div>
             <div class="input-row">
-                <input type="text"
-                    name="contact-number" id="contact-number" maxlength="10"
-                    class="input-field" placeholder="Contact Number">
+                <input type="text" name="contact-number" id="contact-number" maxlength="10" class="input-field" placeholder="Contact Number">
+                <span id="contact-no-info" class="message"></span> 
             </div>
             <div class="input-row">
-                <input
-                    type="password" name="register-password"
-                    id="register-password" class="input-field"
-                    placeholder="Password">
+                <input type="password" name="register-password" id="register-password" class="input-field" placeholder="Password">
+                <span id="register-passwd-info" class="message"></span> 
             </div>
             <div class="input-row">
-                <input
-                    type="password" name="confirm-password"
-                    id="confirm-password" class="input-field"
-                    placeholder="Confirm Password">
+                <input type="password" name="confirm-password" id="confirm-password" class="input-field" placeholder="Confirm Password">
+                <span id="confirm-passwd-info" class="message"></span> 
             </div>
 
             <p class="card-text or">or</p>
@@ -145,7 +140,7 @@
                 style="display: none"></div>
              -->
 
-                <p class="card-text ready">Already a Member ? <a class="link" onclick="location.href='login-form.html'">LOG IN</a></p>
+                <p class="card-text ready">Already a Member ? <a class="link" onclick="location.href='index.php'">LOG IN</a></p>
 
         
       </div>
