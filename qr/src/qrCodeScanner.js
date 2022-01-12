@@ -50,7 +50,7 @@ function tick() {
 function scan() {
   try {
     qrcode.decode();
-    window.location.href="../free/free.html"
+    window.location.href="../free/non.html"
   } catch (e) {
     setTimeout(scan, 8000);
   }

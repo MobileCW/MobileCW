@@ -6,12 +6,15 @@ $('#fav1').hide();
 $("#restaurant01").on('click', function (event) {
     event.preventDefault();
     if (checkButtonClick1 == false) {
+        // alert("ss")
         $('#fav1').show();
         $('#fav').hide();
         checkButtonClick1 = true;
         favouriteItems.push(product1)
         localStorage.setItem('favouriteList', JSON.stringify(favouriteItems));
     } else {
+        
+        alert("hrllo")
         $('#fav1').hide();
         $('#fav').show();
         checkButtonClick1 = false;
