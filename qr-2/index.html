@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>FoodMunch</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="libraries/jquery.mobile-1.4.5.min.css" />
+    <script src="libraries/jquery-1.11.3.min.js"></script>
+    <script src="libraries/jquery.mobile-1.4.5.min.js"></script>
+    <link rel="stylesheet" href="libraries/themes/foodMunchTheme.min.css" />
+    <script src="https://kit.fontawesome.com/2458e99c54.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="libraries/themes/jquery.mobile.icons.min.css" />
+    <link rel="stylesheet" href="styles/common.css" />  
+    <link rel="stylesheet" href="../qr/src/style.css" />
+    <script src="html5-qrcode.min_.js"></script>
+  </head>
+  <style>
+    .color-font {
+      color: rgb(255, 255, 255);
+    }
+
+    .button-back {
+        position: relative!important;
+        top: 10px!important;
+        right: -4px!important;
+    }
+    .cart-description {
+        position: relative!important;
+        top: -24px!important;
+        right: -44px!important;
+        font-size: 20px!important;
+    }
+    .close {
+      position: relative!important;
+      top: 10px!important;
+      right: -14px!important;
+      color: #ffff!important;
+      line-height: 50px!important;
+      font-size: 28px!important;
+    }
+    .result{
+    background-color: green;
+    color:#fff;
+    padding:20px;
+    }
+    .row{
+      display:flex;
+    }
+
+
+  </style>
+
+<body>
+  <div class="ui-grid-a">
+    <div class="ui-block-a">
+        <label for="text-basic">
+          <div class="ui-alt-icon">
+            <a onclick="location.href='../home.html'" ><i class="far fa-times-circle close"></i></a>
+            <div class="cart-description color-font"></div>
+          </div>
+        </label>
+    </div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar edit-one"></div></div>
+  </div>
+
+  
+  <div id="container">
+    <br>
+    <!-- <h1>QR Code Scanner</h1> -->
+
+    <a id="btn-scan-qr">
+      <!-- <img src="https://dab1nmslvvntp.cloudfront.net/wp-content/uploads/2017/07/1499401426qr_icon.svg"> -->
+      <div class="row">
+        <div class="col">
+          <div id="reader"></div>
+        </div>
+        
+      </div>
+
+      <div class="col" style="padding:30px;">
+        <h4>SCAN RESULT</h4>
+        <div id="result" >Result Here</div>
+      </div>
+    </a>
+    
+
+  
+</body>
+</html>
+
+<script type="text/javascript">
+  function onScanSuccess(qrCodeMessage) {
+      document.getElementById('result').innerHTML = '<button class="result">'+qrCodeMessage+'</button>';
+  }
+  function onScanError(errorMessage) {
+    //handle scan error
+  }
+  var html5QrcodeScanner = new Html5QrcodeScanner(
+      "reader", { fps: 10, qrbox: 250 });
+  html5QrcodeScanner.render(onScanSuccess, onScanError);
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 
+
+
+
+<h1 style="text-align: center;">QR Code</h1>
+
+
+<script src="html5-qrcode.min_.js"></script>
+<style>
+  .result{
+    background-color: green;
+    color:#fff;
+    padding:20px;
+  }
+  .row{
+    display:flex;
+  }
+</style>
+<div class="row">
+  <div class="col">
+    <div style="width:500px;" id="reader"></div>
+  </div>
+  <div class="col" style="padding:30px;">
+    <h4>SCAN RESULT</h4>
+    <div id="result">Result Here</div>
+  </div>
+</div>
+<script type="text/javascript">
+function onScanSuccess(qrCodeMessage) {
+    document.getElementById('result').innerHTML = '<button class="result">'+qrCodeMessage+'</button>';
+}
+function onScanError(errorMessage) {
+  //handle scan error
+}
+var html5QrcodeScanner = new Html5QrcodeScanner(
+    "reader", { fps: 10, qrbox: 250 });
+html5QrcodeScanner.render(onScanSuccess, onScanError);
+</script> -->

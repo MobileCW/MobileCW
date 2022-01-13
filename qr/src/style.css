@@ -32,11 +32,15 @@ html {
   }
   
   #btn-scan-qr img {
-    height: 10em;
-    padding: 15px;
+    height: 9em;
+    padding: 12px;
     margin: 15px;
     background: white;
-  }
+    width: 154px!important;
+    position: relative!important;
+    right: -26px!important;
+    top: -24px!important;
+}
   
   #qr-result {
     font-size: 1.2em;
@@ -45,3 +49,28 @@ html {
     max-width: 700px;
     background-color: white;
   }
+
+  a {
+    color: #FF7622!important;
+}
+
+[type=button]:not(:disabled), [type=reset]:not(:disabled), [type=submit]:not(:disabled), button:not(:disabled) {
+  cursor: pointer;
+  position: relative!important;
+  right: -9px!important;
+  height: 33px!important;
+  background-color: #FF7622!important;
+  color: #FFFFFF!important;
+  text-shadow: none!important;
+  top: -37px;
+  width: 238px!important;
+  border-radius: 7px!important;
+}
+
+button, input, optgroup, select, textarea {
+  margin: 4px;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  top: -1px!Important;
+}

@@ -11,6 +11,8 @@ let scanning = false;
 qrcode.callback = res => {
   if (res) {
     outputData.innerText = res;
+    x =res
+    localStorage.point = x;
     scanning = false;
 
     video.srcObject.getTracks().forEach(track => {

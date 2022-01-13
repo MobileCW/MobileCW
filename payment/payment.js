@@ -10,6 +10,8 @@ $(() => {
            "Thank you, your payment was successful!"+
            " </div> ");
            
+          // window.location.href = "success.html";
+           
         }
       }
     });
@@ -24,16 +26,15 @@ $(() => {
         handler.open({
           name: "Pay",
           currency: "LKR",
-          description: "Sitter Payment",
+          description: "FoodMunch Payment",
           amount: 1000*100
         });
         $(window).on("popstate", function () {
           console.log("done");
           handler.close();
-          window.location.href = "../home.html";
         });
       }
     });
   });
   
-  
+ 
