@@ -162,7 +162,7 @@ var shoppingCart = (function() {
       output +=
         "<div class='card space'>"+
           "<div class='row'>"+
-             " <div class='col-4'><img class='card-img-top cart-image ' src='../assets/foods/food3.jpeg' alt='Card image cap'></div>"+
+             " <div class='col-4'><img class='card-img-top cart-image ' src='../assets/foods/food9.jpg' alt='Card image cap'></div>"+
               "<div class='col-6'> <p class='card-text cart-font'>"+cartArray[i].name+"</p></div>"+
              " <div class='col-6'> <p class='card-text cart-price'><b>"+cartArray[i].price+"</b></p></div>"+
              "<table class='table table-cart'>"+
