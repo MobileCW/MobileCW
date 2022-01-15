@@ -66,21 +66,61 @@
       right:-328px ;
       }
     }
+    @media screen and (orientation:portrait) {
+      .left {
+      position: relative!important;
+      right:-328px ;
+      }
+      .pen {
+      height: 300px;
+      border-radius: 1.3rem!important;
+      }
+      .space {
+        border: none!important;
+        padding-left: 30px;
+        padding-right: 30px;
+      }
+      .font {
+      font-size: 1.5rem!important;
+      position: relative!important;
+      top: -18px!important;
+      }
+      .card-text {
+        font-size: 1.5rem!important;
+      }
+      .add {
+        width: 80px;
+      }
+      .left {
+        position: relative!important;
+        right: -150px ;
+      }
+    }
   </style>
   <body>   
     <div class="p-1">
-      <div class="ui-grid-a">
+      <div class="ui-grid-b">
         <div class="ui-block-a">
           <div class="ui-bar ui-bar space border-color right" >
             <img src="assets/icons/icon3.png" alt="Girl in a jacket" class="logo-image">
           </div>
         </div>
         <div class="ui-block-b">
+            <div class="ui-bar ui-bar space border-color card-text">
+              <p style="color: #FF7622;">Deliver to</p>
+                <div onclick="location.href='saveLocation.html'">
+                  Hatch Works
+                </div>
+            </div>
+          </a>
+        </div>
+        <div class="ui-block-c">
           <div class="ui-bar ui-bar space border-color left" >
             <img src="assets/icons/icon1.png" alt="Girl in a jacket" class="man-image" />
           </div>
         </div> 
       </div>
+
       <form>
         <input data-type="search" id="searchFilterReveal">
       </form>
