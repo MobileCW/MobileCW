@@ -15,82 +15,12 @@
     <link rel="stylesheet" href="../styles/common.css" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://kit.fontawesome.com/2458e99c54.js" crossorigin="anonymous"></script>
-
-    <script>
-      function ready(fn) {
-      if(document.readyState != 'loading') {
-        fn();
-      } else {
-        document.addEventListener('DOMContentLoaded', fn);
-      }
-    }
-
-  var selectedRating = 0;
-
-  ready(function(){
-
-    function addClass(el, className) {
-      if(typeof el.length == "number") {
-        Array.prototype.forEach.call(el, function(e,i){ addClass(e, className) });
-        return;
-      }
-      if (el.classList)
-        el.classList.add(className);
-      else
-        el.className += ' ' + className;    
-    }
-    function removeClass(el, className) {
-      if(typeof el.length == "number") {
-        Array.prototype.forEach.call(el, function(e,i){ removeClass(e, className) });
-        return;
-      }
-      if (el.classList)
-        el.classList.remove(className);
-      else if(el.className)
-        el.className = el.className.replace(new RegExp('(^|\\b)' + className.split(' ').join('|') + '(\\b|$)', 'gi'), ' ');
-    }
-
-    var stars = document.querySelectorAll(".rating-stars a");
-    Array.prototype.forEach.call(stars, function(el, i){
-      el.addEventListener("mouseover", function(evt){
-        removeClass(stars, "selected");
-        // For each star up to the highlighted one, add "hover"
-        var to = parseInt(evt.target.getAttribute("data-rating"));
-        Array.prototype.forEach.call(stars, function(star, i) {
-          if(parseInt(star.getAttribute("data-rating")) <= to) {
-            addClass(star, "hover");
-          }
-        });
-      });
-      el.addEventListener("mouseout", function(evt){
-        removeClass(evt.target, "hover");
-      });
-      el.addEventListener("click", function(evt){
-        selectedRating = parseInt(evt.target.getAttribute("data-rating"));
-        removeClass(stars, "hover");
-        Array.prototype.forEach.call(stars, function(star, i) {
-          if(parseInt(star.getAttribute("data-rating")) <= selectedRating) {
-            addClass(star, "selected");
-          }
-        });      
-        evt.preventDefault();
-      });
-    });
-    document.querySelector(".rating-stars").addEventListener("mouseout", function(evt){
-      // When the cursor leaves the whole rating star area, remove the "hover" class and apply 
-      // the "selected" class to the number of stars selected.
-      removeClass(stars, "hover");
-      if(selectedRating) {
-        Array.prototype.forEach.call(stars, function(star, i) {
-          if(parseInt(star.getAttribute("data-rating")) <= selectedRating) {
-            addClass(star, "selected");
-          }
-        });      
-      }
-    });
+    <link href="css/rating.css" rel="stylesheet" type="text/css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script type="text/javascript" src="rating.js"></script>
+    <script language="javascript" type="text/javascript"></script>
   
-});
-    </script>
+
   </head>
   <style>
     .button-back {
@@ -209,19 +139,19 @@
         left: -9px!important;
         top: 1px!important;
     }
-    .rating-stars a {
+    input[name=comment] {
+        width: 100%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        box-sizing: border-box;
+    }
+    .rating-stars {
       display: inline-block;
-      width: 64px;
-      height: 64px;
+      width: 300px;
+      height: 28px;
       background-repeat: no-repeat;
-      background-image: url("data:image/svg+xml;base64,PHN2ZyB2ZXJzaW9uPSIxLjEiIGlkPSJMYXllcl8xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHg9IjBweCIgeT0iMHB4IgogICB3aWR0aD0iNjRweCIgaGVpZ2h0PSI2NHB4IiB2aWV3Qm94PSIwIDAgNjQgNjQiIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDY0IDY0IiB4bWw6c3BhY2U9InByZXNlcnZlIj48cG9seWdvbiBmaWxsPSJub25lIiBzdHJva2U9IiNBN0E5QUMiIHN0cm9rZS13aWR0aD0iNCIgc3Ryb2tlLW1pdGVybGltaXQ9IjEwIiBwb2ludHM9IjMxLjg2Niw2LjYxOCA0MC4wOSwyMy4yODEgNTguNDc5LDI1Ljk1MyA0NS4xNzIsMzguOTIzIDQ4LjMxMyw1Ny4yMzkgMzEuODY2LDQ4LjU5MiAxNS40MTgsNTcuMjM5IDE4LjU2LDM4LjkyMyA1LjI1MywyNS45NTMgMjMuNjQyLDIzLjI4MSAiLz48L3N2Zz4=");
       outline: none;
-    }
-    .rating-stars a.hover {
-      background-image: url("data:image/svg+xml;base64,PHN2ZyB2ZXJzaW9uPSIxLjEiIGlkPSJMYXllcl8xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHg9IjBweCIgeT0iMHB4IgogICB3aWR0aD0iNjRweCIgaGVpZ2h0PSI2NHB4IiB2aWV3Qm94PSIwIDAgNjQgNjQiIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDY0IDY0IiB4bWw6c3BhY2U9InByZXNlcnZlIj48cG9seWdvbiBmaWxsPSIjRkVDMjBGIiBzdHJva2U9IiNGRUMyMEYiIHN0cm9rZS13aWR0aD0iNCIgc3Ryb2tlLW1pdGVybGltaXQ9IjEwIiBwb2ludHM9IjMxLjg2Niw2LjYxOCA0MC4wOSwyMy4yODEgNTguNDc5LDI1Ljk1MyA0NS4xNzIsMzguOTIzIDQ4LjMxMyw1Ny4yMzkgMzEuODY2LDQ4LjU5MiAxNS40MTgsNTcuMjM5IDE4LjU2LDM4LjkyMyA1LjI1MywyNS45NTMgMjMuNjQyLDIzLjI4MSAiLz48L3N2Zz4=");
-    }
-    .rating-stars a.selected {
-      background-image: url("data:image/svg+xml;base64,PHN2ZyB2ZXJzaW9uPSIxLjEiIGlkPSJMYXllcl8xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHg9IjBweCIgeT0iMHB4IgogICB3aWR0aD0iNjRweCIgaGVpZ2h0PSI2NHB4IiB2aWV3Qm94PSIwIDAgNjQgNjQiIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDY0IDY0IiB4bWw6c3BhY2U9InByZXNlcnZlIj48cG9seWdvbiBmaWxsPSIjRkVDMjBGIiBzdHJva2U9IiNGRUMyMEYiIHN0cm9rZS13aWR0aD0iNCIgc3Ryb2tlLW1pdGVybGltaXQ9IjEwIiBwb2ludHM9IjMxLjg2Niw2LjYxOCA0MC4wOSwyMy4yODEgNTguNDc5LDI1Ljk1MyA0NS4xNzIsMzguOTIzIDQ4LjMxMyw1Ny4yMzkgMzEuODY2LDQ4LjU5MiAxNS40MTgsNTcuMjM5IDE4LjU2LDM4LjkyMyA1LjI1MywyNS45NTMgMjMuNjQyLDIzLjI4MSAiLz48L3N2Zz4=");
+      padding-left:130px;
     }
     @media screen and (orientation:landscape) {
         .edit {
@@ -263,6 +193,33 @@
         top: 0px!important;
         right: 36px;
         }
+        input[name=comment] {
+            width: 100%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            box-sizing: border-box;
+        }
+        .io {
+            color: red;
+            font-size: 12px;
+        }
+        #comment-message {
+            margin-left: 37px;
+            color: #189a18;
+            display: none;
+            width: 268px!important;
+            height: 44px!important;
+        }
+        .alert-success {
+            position: relative!important;
+            top: 0px!important;
+            right: -40px;
+        }
+    }
+    .overall-rating { 
+        font-size: 20px;
+        margin-top: 5px;
+        color: #8e8d8d;
     }
   </style>
 
@@ -271,10 +228,11 @@
         <div class="ui-grid-a">
             <div class="ui-block-a">
                 <label for="text-basic">
-                    <div class="ui-alt-icon">
-                        <a href="#" target="_self" class="ui-btn ui-shadow ui-corner-all ui-icon-carat-l ui-btn-icon-notext ui-btn-inline button-back">Reviews</a>
-                        <div class="cart-description">Reviews</div>
-                    </div>
+                <div class="ui-alt-icon">
+                  <a href="#" target="_self" class="ui-btn ui-shadow ui-corner-all ui-icon-carat-l ui-btn-icon-notext ui-btn-inline button-back">Reviews</a>
+                    <a onclick="location.href='../payment/productDetails.html'" target="_self" class="ui-btn ui-shadow ui-corner-all ui-icon-carat-l ui-btn-icon-notext ui-btn-inline button-back">Reviews</a>
+                    <div class="cart-description">Reviews</div>
+                </div>
                 </label>
             </div>
             <div><a class='edit' href='#popupLogin' data-rel='popup' data-position-to='window'   data-transition='pop' >ADD COMMENT</a></div>
@@ -283,20 +241,31 @@
         <br>
         <div data-role="popup" id="popupLogin" data-theme="a" class="ui-corner-all">
             <div style="padding:10px 20px;">
-                <h3>ADD COMMENT</h3>
-                <form id="frm-comment" >
+                <h3>How was your experience with us ?</h3>
+                <form id="frm-comment" name="RegForm">
                     <div class="input-row">
-                        <div class="rating-stars">
-                            <a href="" data-rating="1"></a><a href="" data-rating="2"></a><a href="" data-rating="3"></a><a href="" data-rating="4"></a><a href="" data-rating="5"></a>
-                        </div>
+                      <div class="rating-stars">
+                        <div class="overall-rating">
+                            <input name="rating" value="0" id="rating_star" type="hidden" />
+
+                            <!-- Average Rating 
+                            <span id="avgrat">
+                                <?php echo $ratingRow['average_rating']; ?
+                            ></span>
+                            Based on <span id="totalrat"><?php echo $ratingRow['rating_number']; ?></span>  rating)</span> -->
+                        </div>  
+                        <!-- <a href="" name="1" data-rating="1"></a><a href="" data-rating="2"></a><a href="" data-rating="3"></a><a href="" data-rating="4"></a><a href="" data-rating="5"></a> -->
+                      </div>
                     </div>
                     <div class="input-row">
                         <input type="hidden" name="comment_id" id="commentId" placeholder="Name" /> 
-                        <input class="input-field" type="text" name="name" id="name" placeholder="Name" />
+                        <input class="input-field" type="hidden" name="name" id="name" placeholder="Name" postID="1" />
+                        <span id="demo-info" class="io"></span>
                     </div>
                     <div class="input-row">
-                        <textarea class="input-field" type="text" name="comment"
-                        id="comment" placeholder="Add a Comment">  </textarea>
+                        <input class="input-field" type="text" name="comment" 
+                        id="comment" placeholder="Add a Comment"/> 
+                        <span id="demo-info2" class="io"></span>
                     </div>
                     <div>
                         <input type="button" class="btn-submit" id="submitButton"
@@ -315,13 +284,50 @@
                 <div data-role="navbar" >
                 <ul>
                     <li><a href="../home.html" class="ui-btn-active border" target="_self" data-transition="slide"><img src="../assets/navBar/home.png" alt="Girl in a jacket" class="bar"></a></li>
-                    <li><a href="#" class="border" target="_self" data-transition="slide"><img src="../assets/navBar/account.png" alt="Girl in a jacket" class="bar"></a></li>
+                    <li><a href="../profile.html" class="border" target="_self" data-transition="slide"><img src="../assets/navBar/account.png" alt="Girl in a jacket" class="bar"></a></li>
                     <li><a href="../cart.html" class="border" target="_self" data-transition="slide"><img src="../assets/navBar/cart.png" alt="Girl in a jacket" class="bar"></a></li>
-                    <li><a href="#" class="border" target="_self" data-transition="slide"><img src="../assets/navBar/qr.png" alt="Girl in a jacket" class="bar"></a></li>
+                    <li><a href="../qr/index.html" class="border" target="_self" data-transition="slide"><img src="../assets/navBar/qr.png" alt="Girl in a jacket" class="bar"></a></li>
                 </ul>
                 </div>
             </div> 
         </div>
+        
   </body>
 </html>
 <script src="review.js"></script>
+<script src="rating.js"></script>
+
+<script>
+    var x = localStorage.getItem("userName");
+    document.getElementById("name").value = x;
+</script>
+
+<script language="javascript" type="text/javascript">
+  $(function() {
+      $("#rating_star").spaceo_rating_widget({
+          starLength: '5',
+          initialValue: '',
+          callbackFunctionName: 'processRating',
+          imageDirectory: 'img/',
+          inputAttr: 'post_id'
+      });
+  });
+  
+ function processRating(val, attrVal){
+      $.ajax({
+          type: 'POST',
+          url: 'rating.php',
+          data: 'post_id=1&points='+val,
+          dataType: 'json',
+          success : function(data) {
+              if (data.status == 'ok') {
+                  // alert('You have rated '+val+' to the dish');
+                  $('#avgrat').text(data.average_rating);
+                  $('#totalrat').text(data.rating_number);
+              }else{
+                  alert('Wait a bit before try again.');
+              }
+          }
+      });
+  }
+  </script>
