@@ -73,10 +73,91 @@
       "grid_three"
       "grid_four"
     }
+    .spacee {
+      border: none!important;
+        }
+    .button-back {
+      position: relative!important;
+      top: 10px!important;
+      right: -4px!important;
+    }
+    .cart-description {
+      position: relative!important;
+      top: -24px!important;
+      right: -44px!important;
+      font-size: 20px!important;
+    }
+    .penn {
+      height: 222px;
+      border-radius: 1.3rem!important;
+    }
+    .fontt {
+      font-size: 1 rem!important;
+      position: relative!important;
+      top: -12px!important;
+      color: rgb(100, 95, 95)!important;
+    }
+    .round{
+      background-color:#FF7622!important;
+      color: white!important;
+      border-radius: 25px!important;
+    }
+    .categories {
+      padding: 5px!important;
+      font-size: 1 rem!important;
+      height: 44px!important;
+      width: 92px!important;
+    }
+    .one {
+      padding: 6px!important;
+      width: 108px!important;
+      padding-top: -65px!important;
+    }
+    .round-select{
+      background-color:#ffffff!important;
+      color: rgb(12, 12, 12)!important;
+      border-radius: 25px!important;
+    }
+    .border-changee {
+      width: 158px!important;
+      height: 180px!important;
+    }
+    .horizontal-postt {
+      position: relative!important;
+      left: 8px!important;
+      top: 8px!important;
+    }
+    .horizontal-post-two {
+      position: relative!important;
+      left: 8px!important;
+      top: -4px!important;
+    }
+    .pen-to {
+      border-radius: 1.3rem!important;
+    }
+    .one-take {
+      position: relative!important;
+      left: 126px!important;
+      top: -49px!important;
+      width: 24px!important;
+      height: 24px!important;
+    }
+    .wrapper1 {
+      display: grid;
+      grid-gap: 1em;
+      grid-template-areas:
+      "grid_one1"
+      "grid_two1"
+      "grid_three1"
+      "grid_four1"
+    }
+    .rechangee {
+        padding: 18.8px 0.4rem!important;
+    }
     @media screen and (orientation:landscape) {
       .left {
-      position: relative!important;
-      right:-318px ;
+        position: relative!important;
+        right:-318px ;
       }
       .horizontal-width {
         flex: 0 0 auto!important;
@@ -93,9 +174,40 @@
         "grid_one   grid_two"
         "grid_three  grid_four";
       }
+      .penn {
+        height: 170px;
+        border-radius: 1.3rem!important;
+        width: 318px;
+      }
+      .rechangee {
+        padding: 18.8px 0.4rem!important;
+        position: relative!important;
+        left: 326px!important;
+        top: -180px!important;
+        width: 468px;
+      }
+      .c-plus {
+        position: relative!important;
+        left: 0px!important;
+        top: -122px!important;
+      }
+      .wrapper1 {
+        grid-template-columns: 50% auto;
+        grid-template-areas:
+        "grid_one1   grid_two1 grid_three1  grid_four1";
+        position: relative!important;
+        left: 2px!important;
+        top: -118px!important;
+      }
+      .one {
+        padding: 6px!important;
+        width: 142px!important;
+        padding-top: -65px!important;
+      }
     }
   </style>
-  <body>   
+  <body>
+    <div data-role="page" id="foo">
     <div class="p-1">
       <div class="ui-grid-a">
         <div class="ui-block-a">
@@ -141,7 +253,7 @@
             </div>
             <div class="horizontal-width">
               <div class="card border-change pen" >
-                <img class="card-img-top pen" src="assets/foods/food4.jpeg" alt="Card image cap">
+                <img class="card-img-top pen" src="assets/foods/food4.jpeg"  alt="Card image cap">
                 <p class="card-text horizontal-post"><b>Noodles</b></p>
               </div>
             </div>
@@ -162,8 +274,7 @@
                 <img class="card-img-top pen" src="assets/foods/food5.jpeg" alt="Card image cap">
                 <p class="card-text horizontal-post"><b>Parata</b></p>
               </div>
-            </div>        
-            
+            </div>                 
           </div>
         </div>
       </div>
@@ -172,14 +283,14 @@
         <div class="ui-block-b"><div class="ui-bar ui-bar space border-color left" style="height:34px">See All </div></div>
       </div> 
       <div class="wrapper">
-        <div class="card space grid_one" onclick="location.href='resturantView.html'">
-          <img class="card-img-top pen horizontal-pen " src="assets/resturant1.jpeg" alt="Card image cap">
+        <div class="card space grid_one" onclick="location.href='#resturant1'">
+          <img class="card-img-top pen horizontal-pen " src="assets/resturant1.jpg" alt="Card image cap">
           <div class="card-body rechange">
             <p class="card-text"><b>Rose Garden Restaurant</b></p>
             <p class="card-text font">Burger - Chiken - Riche - Wings</p>
           </div>
         </div>
-        <div class="card space grid_two" >
+        <div class="card space grid_two" onclick="location.href='#resturant2'"  >
           <img class="card-img-top pen horizontal-pen " src="assets/resturant2.jpeg" alt="Card image cap">
           <div class="card-body rechange">
             <p class="card-text"><b>Chicken Hut</b></p>
@@ -187,16 +298,30 @@
           </div>
         </div>
         <div class="card space grid_three" >
-          <img class="card-img-top pen horizontal-pen " src="assets/resturant3.jpg" alt="Card image cap">
+          <img class="card-img-top pen horizontal-pen " onclick="location.href='#resturant3'" src="assets/resturant3.jpg" alt="Card image cap">
           <div class="card-body rechange">
-            <p class="card-text"><b>Chicken Hut</b></p>
+            <p class="card-text"><b>ST Food</b></p>
             <p class="card-text font"> Chiken Eat with Curry</p>
           </div>
         </div>
         <div class="card space grid_four" >
-          <img class="card-img-top pen horizontal-pen " src="assets/resturant4.jpg" alt="Card image cap">
+          <img class="card-img-top pen horizontal-pen " onclick="location.href='#resturant4'" src="assets/resturant4.jpg" alt="Card image cap">
           <div class="card-body rechange">
-            <p class="card-text"><b>Chicken Hut</b></p>
+            <p class="card-text"><b>Rice & Curry Pot</b></p>
+            <p class="card-text font"> Chiken Eat with Curry</p>
+          </div>
+        </div>
+        <div class="card space grid_four" >
+          <img class="card-img-top pen horizontal-pen " onclick="location.href='#resturant5'" src="assets/resturant5.jpg" alt="Card image cap">
+          <div class="card-body rechange">
+            <p class="card-text"><b>Food Pot</b></p>
+            <p class="card-text font"> Chiken Eat with Curry</p>
+          </div>
+        </div>
+        <div class="card space grid_four" >
+          <img class="card-img-top pen horizontal-pen " onclick="location.href='#resturant6'" src="assets/resturant6.jpeg" alt="Card image cap">
+          <div class="card-body rechange">
+            <p class="card-text"><b>Hot Pot</b></p>
             <p class="card-text font"> Chiken Eat with Curry</p>
           </div>
         </div>
@@ -212,19 +337,587 @@
           </ul>
         </div>
     </div>
+  </div>   
+
+<div data-role="page" id="resturant1">
+  <div class="p-1">
+      <div data-role="header" data-position="fixed">
+          <div class="ui-grid-a">
+              <div class="ui-block-a">
+                  <label for="text-basic">
+                      <div class="ui-alt-icon">
+                      <a onclick="location.href='home.html'" target="_self" class="ui-btn ui-shadow ui-corner-all ui-icon-carat-l ui-btn-icon-notext ui-btn-inline button-back">My Favourite</a>
+                      <div class="cart-description">Restaurant View</div>
+                      </div>
+                  </label>
+              </div>
+              <!-- <div class="ui-block-b"><div class="ui-bar ui-bar edit-one" onclick="location.href='share-favourite.html'">SHARE FAVOURITES</div></div> -->
+          </div>
+      </div>
+      <div class="card space ">
+      <img class="card-img-top penn " src="assets/resturant1.jpg" alt="Card image cap">
+      <div class="card-body rechangee">
+          <p class="card-text"><b>Rose Garden Restaurant</b></p>
+          <p class="card-text fontt">A restaurant is generally an establishment where the public may obtain meals or refreshments. and broths served within.</p>
+      </div>
+      </div>
+      <div class="ui-grid-c c-plus">
+          <div class="ui-block-a one">
+              <button class="card-text categories round" >Pizza</button>
+          </div>
+          <div class="ui-block-b one">
+              <button class="card-text categories round-select" >Noodles</button>
+          </div>
+          <div class="ui-block-c one">
+              <button class="card-text categories round-select" >Pasta</button>
+          </div>
+      </div>
+      <div class="wrapper1">
+      <div class="row">
+          <div class="col grid_one1">
+              <div class="horizontal-width" onclick="location.href='payment/productDetails.html'">
+              <div class="card border-changee penn " >
+                  <img class="card-img-top pen-to" src="assets/foods/food9.jpg" alt="Card image cap">
+                  <p class="card-text horizontal-postt"><b>Chicken-Pizza</b></p>
+                  <p class="card-text horizontal-post-two"><b>Rs 1500</b></p>
+                  <img src="./assets/icons/Plus.png" class="one-take"/>
+              </div>
+              </div>
+          </div>
+          <div class="col grid_two1">
+              <div class="horizontal-width" onclick="location.href='payment/productDetails.html'">
+              <div class="card border-changee penn " >
+                  <img class="card-img-top pen-to" src="assets/foods/food6.jpg" alt="Card image cap">
+                  <p class="card-text horizontal-postt"><b>Thandoori-Pizza</b></p>
+                  <p class="card-text horizontal-post-two"><b>Rs 1800</b></p>
+                  <img src="./assets/icons/Plus.png" class="one-take"/>
+              </div>
+              </div>
+          </div>
+      </div>
+      <br>
+      <div class="row">
+          <div class="col grid_three1">
+              <div class="horizontal-width">
+              <div class="card border-changee penn " >
+                  <img class="card-img-top pen-to" src="assets/foods/food7.jpg" alt="Card image cap">
+                  <p class="card-text horizontal-postt"><b>Devil-Pizza</b></p>
+                  <p class="card-text horizontal-post-two"><b>Rs 1900</b></p>
+                  <img src="./assets/icons/Plus.png" class="one-take"/>
+              </div>
+              </div>
+          </div>
+          <div class="col grid_four1">
+              <div class="horizontal-width">
+              <div class="card border-changee penn " >
+                  <img class="card-img-top pen-to" src="assets/foods/food8.jpg" alt="Card image cap">
+                  <p class="card-text horizontal-postt"><b>Black-Pizza</b></p>
+                  <p class="card-text horizontal-post-two"><b>Rs 1400</b></p>
+                  <img src="./assets/icons/Plus.png" class="one-take"/>
+              </div>
+              </div>
+          </div>
+      </div>
+      </div>
+  </div>
+  <div data-role="footer" data-position="fixed">
+    <div data-role="header">
+      <div data-role="navbar" >
+        <ul>
+          <li><a href="home.html" class="ui-btn-active border" target="_self" data-transition="slide"><img src="assets/navBar/home.png" alt="Girl in a jacket" class="bar"></a></li>
+          <li><a href="profile.html" class="border" target="_self" data-transition="slide"><img src="assets/navBar/account.png" alt="Girl in a jacket" class="bar"></a></li>
+          <li><a href="cart.html" class="border" target="_self" data-transition="slide"><img src="assets/navBar/cart.png" alt="Girl in a jacket" class="bar"></a></li>
+          <li><a href="#" class="border" target="_self" data-transition="slide"><img src="assets/navBar/qr.png" alt="Girl in a jacket" class="bar"></a></li>
+        </ul>
+      </div>
+    </div> 
+  </div>
+</div><!-- /page -->
 
 
 
+<div data-role="page" id="resturant2">
+  <div class="p-1">
+      <div data-role="header" data-position="fixed">
+          <div class="ui-grid-a">
+              <div class="ui-block-a">
+                  <label for="text-basic">
+                      <div class="ui-alt-icon">
+                      <a onclick="location.href='home.html'" target="_self" class="ui-btn ui-shadow ui-corner-all ui-icon-carat-l ui-btn-icon-notext ui-btn-inline button-back">My Favourite</a>
+                      <div class="cart-description">Restaurant View</div>
+                      </div>
+                  </label>
+              </div>
+              <!-- <div class="ui-block-b"><div class="ui-bar ui-bar edit-one" onclick="location.href='share-favourite.html'">SHARE FAVOURITES</div></div> -->
+          </div>
+      </div>
+      <div class="card space ">
+      <img class="card-img-top penn " src="assets/resturant2.jpeg" alt="Card image cap">
+      <div class="card-body rechangee">
+          <p class="card-text"><b>Chicken Hut</b></p>
+          <p class="card-text fontt">A restaurant is generally an establishment where the public may obtain meals or refreshments. and broths served within.</p>
+      </div>
+      </div>
+      <div class="ui-grid-c c-plus">
+          <div class="ui-block-a one">
+              <button class="card-text categories round" >Pizza</button>
+          </div>
+          <div class="ui-block-b one">
+              <button class="card-text categories round-select" >Noodles</button>
+          </div>
+          <div class="ui-block-c one">
+              <button class="card-text categories round-select" >Pasta</button>
+          </div>
+      </div>
+      <div class="wrapper1">
+      <div class="row">
+          <div class="col grid_one1">
+              <div class="horizontal-width" onclick="location.href='payment/productDetails.html'">
+              <div class="card border-changee penn " >
+                  <img class="card-img-top pen-to" src="assets/foods/food9.jpg" alt="Card image cap">
+                  <p class="card-text horizontal-postt"><b>Chicken-Pizza</b></p>
+                  <p class="card-text horizontal-post-two"><b>Rs 1500</b></p>
+                  <img src="./assets/icons/Plus.png" class="one-take"/>
+              </div>
+              </div>
+          </div>
+          <div class="col grid_two1">
+              <div class="horizontal-width" onclick="location.href='payment/productDetails.html'">
+              <div class="card border-changee penn " >
+                  <img class="card-img-top pen-to" src="assets/foods/food6.jpg" alt="Card image cap">
+                  <p class="card-text horizontal-postt"><b>Thandoori-Pizza</b></p>
+                  <p class="card-text horizontal-post-two"><b>Rs 1800</b></p>
+                  <img src="./assets/icons/Plus.png" class="one-take"/>
+              </div>
+              </div>
+          </div>
+      </div>
+      <br>
+      <div class="row">
+          <div class="col grid_three1">
+              <div class="horizontal-width">
+              <div class="card border-changee penn " >
+                  <img class="card-img-top pen-to" src="assets/foods/food7.jpg" alt="Card image cap">
+                  <p class="card-text horizontal-postt"><b>Devil-Pizza</b></p>
+                  <p class="card-text horizontal-post-two"><b>Rs 1900</b></p>
+                  <img src="./assets/icons/Plus.png" class="one-take"/>
+              </div>
+              </div>
+          </div>
+          <div class="col grid_four1">
+              <div class="horizontal-width">
+              <div class="card border-changee penn " >
+                  <img class="card-img-top pen-to" src="assets/foods/food8.jpg" alt="Card image cap">
+                  <p class="card-text horizontal-postt"><b>Black-Pizza</b></p>
+                  <p class="card-text horizontal-post-two"><b>Rs 1400</b></p>
+                  <img src="./assets/icons/Plus.png" class="one-take"/>
+              </div>
+              </div>
+          </div>
+      </div>
+      </div>
+  </div>
+  <div data-role="footer" data-position="fixed">
+    <div data-role="header">
+      <div data-role="navbar" >
+        <ul>
+          <li><a href="home.html" class="ui-btn-active border" target="_self" data-transition="slide"><img src="assets/navBar/home.png" alt="Girl in a jacket" class="bar"></a></li>
+          <li><a href="profile.html" class="border" target="_self" data-transition="slide"><img src="assets/navBar/account.png" alt="Girl in a jacket" class="bar"></a></li>
+          <li><a href="cart.html" class="border" target="_self" data-transition="slide"><img src="assets/navBar/cart.png" alt="Girl in a jacket" class="bar"></a></li>
+          <li><a href="#" class="border" target="_self" data-transition="slide"><img src="assets/navBar/qr.png" alt="Girl in a jacket" class="bar"></a></li>
+        </ul>
+      </div>
+    </div> 
+  </div>
+</div><!-- /page -->
 
+<div data-role="page" id="resturant3">
+  <div class="p-1">
+      <div data-role="header" data-position="fixed">
+          <div class="ui-grid-a">
+              <div class="ui-block-a">
+                  <label for="text-basic">
+                      <div class="ui-alt-icon">
+                      <a onclick="location.href='home.html'" target="_self" class="ui-btn ui-shadow ui-corner-all ui-icon-carat-l ui-btn-icon-notext ui-btn-inline button-back">My Favourite</a>
+                      <div class="cart-description">Restaurant View</div>
+                      </div>
+                  </label>
+              </div>
+              <!-- <div class="ui-block-b"><div class="ui-bar ui-bar edit-one" onclick="location.href='share-favourite.html'">SHARE FAVOURITES</div></div> -->
+          </div>
+      </div>
+      <div class="card space ">
+      <img class="card-img-top penn " src="assets/resturant3.jpg" alt="Card image cap">
+      <div class="card-body rechangee">
+          <p class="card-text"><b>ST Food</b></p>
+          <p class="card-text fontt">A restaurant is generally an establishment where the public may obtain meals or refreshments. and broths served within.</p>
+      </div>
+      </div>
+      <div class="ui-grid-c c-plus">
+          <div class="ui-block-a one">
+              <button class="card-text categories round" >Pizza</button>
+          </div>
+          <div class="ui-block-b one">
+              <button class="card-text categories round-select" >Noodles</button>
+          </div>
+          <div class="ui-block-c one">
+              <button class="card-text categories round-select" >Pasta</button>
+          </div>
+      </div>
+      <div class="wrapper1">
+      <div class="row">
+          <div class="col grid_one1">
+              <div class="horizontal-width" onclick="location.href='payment/productDetails.html'">
+              <div class="card border-changee penn " >
+                  <img class="card-img-top pen-to" src="assets/foods/food9.jpg" alt="Card image cap">
+                  <p class="card-text horizontal-postt"><b>Chicken-Pizza</b></p>
+                  <p class="card-text horizontal-post-two"><b>Rs 1500</b></p>
+                  <img src="./assets/icons/Plus.png" class="one-take"/>
+              </div>
+              </div>
+          </div>
+          <div class="col grid_two1">
+              <div class="horizontal-width" onclick="location.href='payment/productDetails.html'">
+              <div class="card border-changee penn " >
+                  <img class="card-img-top pen-to" src="assets/foods/food6.jpg" alt="Card image cap">
+                  <p class="card-text horizontal-postt"><b>Thandoori-Pizza</b></p>
+                  <p class="card-text horizontal-post-two"><b>Rs 1800</b></p>
+                  <img src="./assets/icons/Plus.png" class="one-take"/>
+              </div>
+              </div>
+          </div>
+      </div>
+      <br>
+      <div class="row">
+          <div class="col grid_three1">
+              <div class="horizontal-width">
+              <div class="card border-changee penn " >
+                  <img class="card-img-top pen-to" src="assets/foods/food7.jpg" alt="Card image cap">
+                  <p class="card-text horizontal-postt"><b>Devil-Pizza</b></p>
+                  <p class="card-text horizontal-post-two"><b>Rs 1900</b></p>
+                  <img src="./assets/icons/Plus.png" class="one-take"/>
+              </div>
+              </div>
+          </div>
+          <div class="col grid_four1">
+              <div class="horizontal-width">
+              <div class="card border-changee penn " >
+                  <img class="card-img-top pen-to" src="assets/foods/food8.jpg" alt="Card image cap">
+                  <p class="card-text horizontal-postt"><b>Black-Pizza</b></p>
+                  <p class="card-text horizontal-post-two"><b>Rs 1400</b></p>
+                  <img src="./assets/icons/Plus.png" class="one-take"/>
+              </div>
+              </div>
+          </div>
+      </div>
+      </div>
+  </div>
+  <div data-role="footer" data-position="fixed">
+    <div data-role="header">
+      <div data-role="navbar" >
+        <ul>
+          <li><a href="home.html" class="ui-btn-active border" target="_self" data-transition="slide"><img src="assets/navBar/home.png" alt="Girl in a jacket" class="bar"></a></li>
+          <li><a href="profile.html" class="border" target="_self" data-transition="slide"><img src="assets/navBar/account.png" alt="Girl in a jacket" class="bar"></a></li>
+          <li><a href="cart.html" class="border" target="_self" data-transition="slide"><img src="assets/navBar/cart.png" alt="Girl in a jacket" class="bar"></a></li>
+          <li><a href="#" class="border" target="_self" data-transition="slide"><img src="assets/navBar/qr.png" alt="Girl in a jacket" class="bar"></a></li>
+        </ul>
+      </div>
+    </div> 
+  </div>
+</div><!-- /page -->
 
+<div data-role="page" id="resturant4">
+  <div class="p-1">
+      <div data-role="header" data-position="fixed">
+          <div class="ui-grid-a">
+              <div class="ui-block-a">
+                  <label for="text-basic">
+                      <div class="ui-alt-icon">
+                      <a onclick="location.href='home.html'" target="_self" class="ui-btn ui-shadow ui-corner-all ui-icon-carat-l ui-btn-icon-notext ui-btn-inline button-back">My Favourite</a>
+                      <div class="cart-description">Restaurant View</div>
+                      </div>
+                  </label>
+              </div>
+              <!-- <div class="ui-block-b"><div class="ui-bar ui-bar edit-one" onclick="location.href='share-favourite.html'">SHARE FAVOURITES</div></div> -->
+          </div>
+      </div>
+      <div class="card space ">
+      <img class="card-img-top penn " src="assets/resturant4.jpg" alt="Card image cap">
+      <div class="card-body rechangee">
+          <p class="card-text"><b>Rice & Curry Pot</b></p>
+          <p class="card-text fontt">A restaurant is generally an establishment where the public may obtain meals or refreshments. and broths served within.</p>
+      </div>
+      </div>
+      <div class="ui-grid-c c-plus">
+          <div class="ui-block-a one">
+              <button class="card-text categories round" >Pizza</button>
+          </div>
+          <div class="ui-block-b one">
+              <button class="card-text categories round-select" >Noodles</button>
+          </div>
+          <div class="ui-block-c one">
+              <button class="card-text categories round-select" >Pasta</button>
+          </div>
+      </div>
+      <div class="wrapper1">
+      <div class="row">
+          <div class="col grid_one1">
+              <div class="horizontal-width" onclick="location.href='payment/productDetails.html'">
+              <div class="card border-changee penn " >
+                  <img class="card-img-top pen-to" src="assets/foods/food9.jpg" alt="Card image cap">
+                  <p class="card-text horizontal-postt"><b>Chicken-Pizza</b></p>
+                  <p class="card-text horizontal-post-two"><b>Rs 1500</b></p>
+                  <img src="./assets/icons/Plus.png" class="one-take"/>
+              </div>
+              </div>
+          </div>
+          <div class="col grid_two1">
+              <div class="horizontal-width" onclick="location.href='payment/productDetails.html'">
+              <div class="card border-changee penn " >
+                  <img class="card-img-top pen-to" src="assets/foods/food6.jpg" alt="Card image cap">
+                  <p class="card-text horizontal-postt"><b>Thandoori-Pizza</b></p>
+                  <p class="card-text horizontal-post-two"><b>Rs 1800</b></p>
+                  <img src="./assets/icons/Plus.png" class="one-take"/>
+              </div>
+              </div>
+          </div>
+      </div>
+      <br>
+      <div class="row">
+          <div class="col grid_three1">
+              <div class="horizontal-width">
+              <div class="card border-changee penn " >
+                  <img class="card-img-top pen-to" src="assets/foods/food7.jpg" alt="Card image cap">
+                  <p class="card-text horizontal-postt"><b>Devil-Pizza</b></p>
+                  <p class="card-text horizontal-post-two"><b>Rs 1900</b></p>
+                  <img src="./assets/icons/Plus.png" class="one-take"/>
+              </div>
+              </div>
+          </div>
+          <div class="col grid_four1">
+              <div class="horizontal-width">
+              <div class="card border-changee penn " >
+                  <img class="card-img-top pen-to" src="assets/foods/food8.jpg" alt="Card image cap">
+                  <p class="card-text horizontal-postt"><b>Black-Pizza</b></p>
+                  <p class="card-text horizontal-post-two"><b>Rs 1400</b></p>
+                  <img src="./assets/icons/Plus.png" class="one-take"/>
+              </div>
+              </div>
+          </div>
+      </div>
+      </div>
+  </div>
+  <div data-role="footer" data-position="fixed">
+    <div data-role="header">
+      <div data-role="navbar" >
+        <ul>
+          <li><a href="home.html" class="ui-btn-active border" target="_self" data-transition="slide"><img src="assets/navBar/home.png" alt="Girl in a jacket" class="bar"></a></li>
+          <li><a href="profile.html" class="border" target="_self" data-transition="slide"><img src="assets/navBar/account.png" alt="Girl in a jacket" class="bar"></a></li>
+          <li><a href="cart.html" class="border" target="_self" data-transition="slide"><img src="assets/navBar/cart.png" alt="Girl in a jacket" class="bar"></a></li>
+          <li><a href="#" class="border" target="_self" data-transition="slide"><img src="assets/navBar/qr.png" alt="Girl in a jacket" class="bar"></a></li>
+        </ul>
+      </div>
+    </div> 
+  </div>
+</div><!-- /page -->
 
+<div data-role="page" id="resturant5">
+  <div class="p-1">
+      <div data-role="header" data-position="fixed">
+          <div class="ui-grid-a">
+              <div class="ui-block-a">
+                  <label for="text-basic">
+                      <div class="ui-alt-icon">
+                      <a onclick="location.href='home.html'" target="_self" class="ui-btn ui-shadow ui-corner-all ui-icon-carat-l ui-btn-icon-notext ui-btn-inline button-back">My Favourite</a>
+                      <div class="cart-description">Restaurant View</div>
+                      </div>
+                  </label>
+              </div>
+              <!-- <div class="ui-block-b"><div class="ui-bar ui-bar edit-one" onclick="location.href='share-favourite.html'">SHARE FAVOURITES</div></div> -->
+          </div>
+      </div>
+      <div class="card space ">
+      <img class="card-img-top penn " src="assets/resturant5.jpg" alt="Card image cap">
+      <div class="card-body rechangee">
+          <p class="card-text"><b>Food Pot</b></p>
+          <p class="card-text fontt">A restaurant is generally an establishment where the public may obtain meals or refreshments. and broths served within.</p>
+      </div>
+      </div>
+      <div class="ui-grid-c c-plus">
+          <div class="ui-block-a one">
+              <button class="card-text categories round" >Pizza</button>
+          </div>
+          <div class="ui-block-b one">
+              <button class="card-text categories round-select" >Noodles</button>
+          </div>
+          <div class="ui-block-c one">
+              <button class="card-text categories round-select" >Pasta</button>
+          </div>
+      </div>
+      <div class="wrapper1">
+      <div class="row">
+          <div class="col grid_one1">
+              <div class="horizontal-width" onclick="location.href='payment/productDetails.html'">
+              <div class="card border-changee penn " >
+                  <img class="card-img-top pen-to" src="assets/foods/food9.jpg" alt="Card image cap">
+                  <p class="card-text horizontal-postt"><b>Chicken-Pizza</b></p>
+                  <p class="card-text horizontal-post-two"><b>Rs 1500</b></p>
+                  <img src="./assets/icons/Plus.png" class="one-take"/>
+              </div>
+              </div>
+          </div>
+          <div class="col grid_two1">
+              <div class="horizontal-width" onclick="location.href='payment/productDetails.html'">
+              <div class="card border-changee penn " >
+                  <img class="card-img-top pen-to" src="assets/foods/food6.jpg" alt="Card image cap">
+                  <p class="card-text horizontal-postt"><b>Thandoori-Pizza</b></p>
+                  <p class="card-text horizontal-post-two"><b>Rs 1800</b></p>
+                  <img src="./assets/icons/Plus.png" class="one-take"/>
+              </div>
+              </div>
+          </div>
+      </div>
+      <br>
+      <div class="row">
+          <div class="col grid_three1">
+              <div class="horizontal-width">
+              <div class="card border-changee penn " >
+                  <img class="card-img-top pen-to" src="assets/foods/food7.jpg" alt="Card image cap">
+                  <p class="card-text horizontal-postt"><b>Devil-Pizza</b></p>
+                  <p class="card-text horizontal-post-two"><b>Rs 1900</b></p>
+                  <img src="./assets/icons/Plus.png" class="one-take"/>
+              </div>
+              </div>
+          </div>
+          <div class="col grid_four1">
+              <div class="horizontal-width">
+              <div class="card border-changee penn " >
+                  <img class="card-img-top pen-to" src="assets/foods/food8.jpg" alt="Card image cap">
+                  <p class="card-text horizontal-postt"><b>Black-Pizza</b></p>
+                  <p class="card-text horizontal-post-two"><b>Rs 1400</b></p>
+                  <img src="./assets/icons/Plus.png" class="one-take"/>
+              </div>
+              </div>
+          </div>
+      </div>
+      </div>
+  </div>
+  <div data-role="footer" data-position="fixed">
+    <div data-role="header">
+      <div data-role="navbar" >
+        <ul>
+          <li><a href="home.html" class="ui-btn-active border" target="_self" data-transition="slide"><img src="assets/navBar/home.png" alt="Girl in a jacket" class="bar"></a></li>
+          <li><a href="profile.html" class="border" target="_self" data-transition="slide"><img src="assets/navBar/account.png" alt="Girl in a jacket" class="bar"></a></li>
+          <li><a href="cart.html" class="border" target="_self" data-transition="slide"><img src="assets/navBar/cart.png" alt="Girl in a jacket" class="bar"></a></li>
+          <li><a href="#" class="border" target="_self" data-transition="slide"><img src="assets/navBar/qr.png" alt="Girl in a jacket" class="bar"></a></li>
+        </ul>
+      </div>
+    </div> 
+  </div>
+</div><!-- /page -->
 
-
-
-
-
-  </body>
+<div data-role="page" id="resturant6">
+  <div class="p-1">
+      <div data-role="header" data-position="fixed">
+          <div class="ui-grid-a">
+              <div class="ui-block-a">
+                  <label for="text-basic">
+                      <div class="ui-alt-icon">
+                      <a onclick="location.href='home.html'" target="_self" class="ui-btn ui-shadow ui-corner-all ui-icon-carat-l ui-btn-icon-notext ui-btn-inline button-back">My Favourite</a>
+                      <div class="cart-description">Restaurant View</div>
+                      </div>
+                  </label>
+              </div>
+              <!-- <div class="ui-block-b"><div class="ui-bar ui-bar edit-one" onclick="location.href='share-favourite.html'">SHARE FAVOURITES</div></div> -->
+          </div>
+      </div>
+      <div class="card space ">
+      <img class="card-img-top penn " src="assets/resturant6.jpeg" alt="Card image cap">
+      <div class="card-body rechangee">
+          <p class="card-text"><b>Hot Pot</b></p>
+          <p class="card-text fontt">A restaurant is generally an establishment where the public may obtain meals or refreshments. and broths served within.</p>
+      </div>
+      </div>
+      <div class="ui-grid-c c-plus">
+          <div class="ui-block-a one">
+              <button class="card-text categories round" >Pizza</button>
+          </div>
+          <div class="ui-block-b one">
+              <button class="card-text categories round-select" >Noodles</button>
+          </div>
+          <div class="ui-block-c one">
+              <button class="card-text categories round-select" >Pasta</button>
+          </div>
+      </div>
+      <div class="wrapper1">
+      <div class="row">
+          <div class="col grid_one1">
+              <div class="horizontal-width" onclick="location.href='payment/productDetails.html'">
+              <div class="card border-changee penn " >
+                  <img class="card-img-top pen-to" src="assets/foods/food9.jpg" alt="Card image cap">
+                  <p class="card-text horizontal-postt"><b>Chicken-Pizza</b></p>
+                  <p class="card-text horizontal-post-two"><b>Rs 1500</b></p>
+                  <img src="./assets/icons/Plus.png" class="one-take"/>
+              </div>
+              </div>
+          </div>
+          <div class="col grid_two1">
+              <div class="horizontal-width" onclick="location.href='payment/productDetails.html'">
+              <div class="card border-changee penn " >
+                  <img class="card-img-top pen-to" src="assets/foods/food6.jpg" alt="Card image cap">
+                  <p class="card-text horizontal-postt"><b>Thandoori-Pizza</b></p>
+                  <p class="card-text horizontal-post-two"><b>Rs 1800</b></p>
+                  <img src="./assets/icons/Plus.png" class="one-take"/>
+              </div>
+              </div>
+          </div>
+      </div>
+      <br>
+      <div class="row">
+          <div class="col grid_three1">
+              <div class="horizontal-width">
+              <div class="card border-changee penn " >
+                  <img class="card-img-top pen-to" src="assets/foods/food7.jpg" alt="Card image cap">
+                  <p class="card-text horizontal-postt"><b>Devil-Pizza</b></p>
+                  <p class="card-text horizontal-post-two"><b>Rs 1900</b></p>
+                  <img src="./assets/icons/Plus.png" class="one-take"/>
+              </div>
+              </div>
+          </div>
+          <div class="col grid_four1">
+              <div class="horizontal-width">
+              <div class="card border-changee penn " >
+                  <img class="card-img-top pen-to" src="assets/foods/food8.jpg" alt="Card image cap">
+                  <p class="card-text horizontal-postt"><b>Black-Pizza</b></p>
+                  <p class="card-text horizontal-post-two"><b>Rs 1400</b></p>
+                  <img src="./assets/icons/Plus.png" class="one-take"/>
+              </div>
+              </div>
+          </div>
+      </div>
+      </div>
+  </div>
+  <div data-role="footer" data-position="fixed">
+    <div data-role="header">
+      <div data-role="navbar" >
+        <ul>
+          <li><a href="home.html" class="ui-btn-active border" target="_self" data-transition="slide"><img src="assets/navBar/home.png" alt="Girl in a jacket" class="bar"></a></li>
+          <li><a href="profile.html" class="border" target="_self" data-transition="slide"><img src="assets/navBar/account.png" alt="Girl in a jacket" class="bar"></a></li>
+          <li><a href="cart.html" class="border" target="_self" data-transition="slide"><img src="assets/navBar/cart.png" alt="Girl in a jacket" class="bar"></a></li>
+          <li><a href="#" class="border" target="_self" data-transition="slide"><img src="assets/navBar/qr.png" alt="Girl in a jacket" class="bar"></a></li>
+        </ul>
+      </div>
+    </div> 
+  </div>
+</div><!-- /page -->
+</body>
 </html>
+
+
+
+
+
+
 
 
 
