@@ -13,6 +13,11 @@
     <link rel="stylesheet" href="libraries/themes/foodMunchTheme.min.css" />
     <link rel="stylesheet" href="libraries/themes/jquery.mobile.icons.min.css" />
     <link rel="stylesheet" href="styles/common.css" />
+    <!-- <link href="ratings/css/rating.css" rel="stylesheet" type="text/css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script type="text/javascript" src="ratings/rating.js"></script>
+    <script language="javascript" type="text/javascript"></script> -->
+
   </head>
   <style>
     .space {
@@ -147,7 +152,7 @@
         <div class="card-body rechange">
           
           <div class="ui-grid-c" style="margin-left: 450px;"> 
-            <div class="ui-block-a">
+            <div class="ui-block-a" onclick="location.href='ratings/rating.html'">
               <img src="assets/icons/icon12.png" alt="Cart" style="padding-right: 50px; height: 38px;" class="man-image" /><p class="card-text font" style="padding-top: 10px; padding-left: 30px;"><b>4.7</b></p>
             </div>
             <div class="ui-block-b">
@@ -157,6 +162,16 @@
               <img src="assets/icons/icon14.png" alt="Cart" style="padding-left: 60px; height: 38px;" class="man-image" />
             </div>
           </div>
+
+          <!-- <div class="overall-rating">
+            <input name="rating" value="0" id="rating_star" type="hidden" />
+
+            Average Rating 
+            <span id="avgrat">
+                <?php echo $ratingRow['average_rating']; ?
+            ></span>q
+            Based on <span id="totalrat"><?php echo $ratingRow['rating_number']; ?></span>  rating)</span>
+          </div>  -->
 
           <div>
             <p class="card-text title"><b>Garlic Angel Hair Pasta</b></p>
@@ -229,10 +244,3 @@
     </div>
   </body>
 </html>
-
-
-
-
-
-
-
