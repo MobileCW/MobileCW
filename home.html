@@ -154,6 +154,13 @@
     .rechangee {
         padding: 18.8px 0.4rem!important;
     }
+    .ui-page-theme-a .ui-bar-inherit {
+      background-color: #ffffff!important;
+      border-color: azure!important;
+      color: #333333!important;
+      text-shadow: 0 1px 0 #eeeeee!important;
+      font-weight: bold!important;
+    }
     @media screen and (orientation:landscape) {
       .left {
         position: relative!important;
@@ -209,19 +216,21 @@
   <body>
     <div data-role="page" id="foo">
     <div class="p-1">
-      <div class="ui-grid-a">
-        <div class="ui-block-a">
-          <div class="ui-bar ui-bar space border-color right" >
-            <img src="assets/icons/icon3.png" alt="Girl in a jacket" class="logo-image">
+      <div data-role="header" data-position="fixed">
+        <div class="ui-grid-a">
+          <div class="ui-block-a">
+            <div class="ui-bar ui-bar space border-color right" >
+              <img src="assets/icons/icon3.png" alt="Girl in a jacket" class="logo-image">
+            </div>
           </div>
+          <div class="ui-block-b">
+            <div class="ui-bar ui-bar space border-color left" >
+              <img src="assets/icons/icon1.png"  onclick="location.href='favourite/favourite-list.html'" alt="Girl in a jacket" class="man-image" />
+            </div>
+          </div> 
         </div>
-        <div class="ui-block-b">
-          <div class="ui-bar ui-bar space border-color left" >
-            <img src="assets/icons/icon1.png"  onclick="location.href='favourite/favourite-list.html'" alt="Girl in a jacket" class="man-image" />
-          </div>
-        </div> 
       </div>
-      <form>
+      <!-- <form>
         <input data-type="search" id="searchFilterReveal">
       </form>
       <ul data-role="listview" data-filter="true" data-input="#searchFilterReveal" data-filter-reveal="true" data-filter-placeholder="Search fruits..." data-inset="true">
@@ -231,7 +240,7 @@
           <li><a href="#">Cranberry</a></li>
           <li><a href="#">Grape</a></li>
           <li><a href="#">Orange</a></li>
-      </ul>
+      </ul> -->
       <div class="ui-grid-a">
         <div class="ui-block-a"><div class="ui-bar ui-bar space border-color right" style="height:34px">All Categories</div></div>
         <div class="ui-block-b"><div class="ui-bar ui-bar space border-color left" style="height:34px">See All </div></div>

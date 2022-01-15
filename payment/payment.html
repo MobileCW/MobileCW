@@ -82,9 +82,47 @@
         width: 349px!important;
         border-radius: 12px!important;
   }
+  .ui-page-theme-a .ui-bar-inherit {
+      background-color: #ffffff!important;
+      border-color: azure!important;
+      color: #333333!important;
+      text-shadow: 0 1px 0 #eeeeee!important;
+      font-weight: bold!important;
+  }
+
+  @media screen and (orientation:landscape) {
+  .cost {
+    position: relative!important;
+    top: 26px!important;
+    right: -8px!important;
+  }
+  .login {
+    position: relative!important;
+    right: -8px!important;
+    height: 62px!important;
+    background-color: #FF7622!important;
+    color: #FFFFFF!important;
+    text-shadow: none!important;
+    top: 30px!important;
+    width: 349px!important;
+    border-radius: 12px!important;
+  }
+  .cancel-login {
+    position: relative!important;
+    right: -444px!important;
+    height: 62px!important;
+    background-color: #df4641!important;
+    color: #FFFFFF!important;
+    text-shadow: none!important;
+    top: -40px!important;
+    width: 349px!important;
+    border-radius: 12px!important;
+  }
+}
   </style>
   <body>
     <div class="p-1">
+      <div data-role="header" data-position="fixed">
         <div class="ui-grid-a">
           <div class="ui-block-a">
               <label for="text-basic">
@@ -95,6 +133,7 @@
               </label>
           </div>
         </div>
+      </div>
         <br>
         <br>
         <div class="ui-grid-c croll">

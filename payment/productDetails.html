@@ -202,6 +202,13 @@
       right: -198px;
       color: #ff240d!important;
     }
+    .ui-page-theme-a .ui-bar-inherit {
+      background-color: #ffffff!important;
+      border-color: azure!important;
+      color: #333333!important;
+      text-shadow: 0 1px 0 #eeeeee!important;
+      font-weight: bold!important;
+    }
 @media screen and (orientation:landscape) {
   .cart-font {
     position: relative!important;
@@ -297,6 +304,7 @@
   <body>
     <div data-role="page" id="foo">
       <div class="p-1">
+        <div data-role="header" data-position="fixed">
           <div class="ui-grid-a">
             <div class="ui-block-a">
                 <label for="text-basic">
@@ -315,6 +323,7 @@
             </div>
             </div>
           </div>
+        </div>
           <br>
           <br>
           <div class="cart-wrapper">

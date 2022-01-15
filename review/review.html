@@ -139,6 +139,13 @@
         margin: 8px 0;
         box-sizing: border-box;
     }
+    .ui-page-theme-a .ui-bar-inherit {
+      background-color: #ffffff!important;
+      border-color: azure!important;
+      color: #333333!important;
+      text-shadow: 0 1px 0 #eeeeee!important;
+      font-weight: bold!important;
+    }
     @media screen and (orientation:landscape) {
         .edit {
             position: relative!important;
@@ -205,6 +212,7 @@
   </style>
   <body>
     <div class="p-1">
+        <div data-role="header" data-position="fixed">
         <div class="ui-grid-a">
             <div class="ui-block-a">
                 <label for="text-basic">
@@ -214,8 +222,8 @@
                 </div>
                 </label>
             </div>
-            <div><a class='edit' href='#popupLogin' data-rel='popup' data-position-to='window'   data-transition='pop' >ADD COMMENT</a></div>
-            
+            <div><a class='edit' href='#popupLogin' data-rel='popup' data-position-to='window'   data-transition='pop' >ADD COMMENT</a></div>   
+        </div>
         </div>
         <br>
         <div data-role="popup" id="popupLogin" data-theme="a" class="ui-corner-all">

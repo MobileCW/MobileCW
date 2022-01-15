@@ -29,7 +29,7 @@ $(() => {
           description: "FoodMunch Payment",
           amount: 1000*100
         });
-        $(window).on("popstate", function () {
+        $(window).on ("popstate", function () {
           console.log("done");
           handler.close();
         });
