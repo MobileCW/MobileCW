@@ -16,6 +16,10 @@ function sendEmail() {
         Body : "<h1>Favourite Restaurant List</h1><br>"
                 + "<h3>Product Name - " + favouritesList[0].productName + "</h3>"
                 + "<h3>Cost - " + favouritesList[0].productCost + "</h3>"
+
+                +"<br>"
+                + "<h3>Product Name - " + favouritesList[1].productName + "</h3>"
+                + "<h3>Cost - " + favouritesList[1].productCost + "</h3>"
                 
 
                 

@@ -133,21 +133,37 @@
           <div class="ui-block-b"><div class="ui-bar ui-bar edit-one" onclick="location.href='share-favourite.html'">SHARE FAVOURITES</div></div>
         </div>
         <div  class="ui-content" id="res01" >
-        <div class="card space item_one">
-            <div class="row">
-                <div class="col-4"><img class="card-img-top cart-image "  id="productImage1"  src="#" alt="Card image cap"></div>
-                <div class="col-6"> <p class="card-text cart-font" id="productName1"></p></div>
-                <div class="col-6"> <p class="card-text cart-price" id="productCost1"><b></b></p></div>
-                <div class="col-6"> <p class="card-text cart-rate" id="productRatings1"><b></b></p></div>
-            </div>
-            <div class="favHeart">
-                <a href="#" id="restaurant01" target="_self">
-                    <img id="fav" style="margin-top: 0px; margin-right: 5px" src="../assets/favourite/heartoutlineicon.png" width="26" height="26" align="right" />
-                    <img id="fav1" style="margin-top: -64px; margin-right: -248px" src="../assets/favourite/heartfillicon.png" width="26" height="26" align="right" />
-                </a>
+            <div class="card space item_one">
+                <div class="row">
+                    <div class="col-4"><img class="card-img-top cart-image "  id="productImage1"  src="#" alt="Card image cap"></div>
+                    <div class="col-6"> <p class="card-text cart-font" id="productName1"></p></div>
+                    <div class="col-6"> <p class="card-text cart-price" id="productCost1"><b></b></p></div>
+                    <div class="col-6"> <p class="card-text cart-rate" id="productRatings1"><b></b></p></div>
+                </div>
+                <div class="favHeart">
+                    <a href="#" id="restaurant01" target="_self">
+                        <img id="fav" style="margin-top: 0px; margin-right: 5px" src="../assets/favourite/heartoutlineicon.png" width="26" height="26" align="right" />
+                        <img id="fav1" style="margin-top: -64px; margin-right: -248px" src="../assets/favourite/heartfillicon.png" width="26" height="26" align="right" />
+                    </a>
+                </div>
             </div>
         </div>
-        </div>
+            <div  class="ui-content" id="res02" >
+                <div class="card space item_one">
+                    <div class="row">
+                        <div class="col-4"><img class="card-img-top cart-image "  id="productImage2"  src="#" alt="Card image cap"></div>
+                        <div class="col-6"> <p class="card-text cart-font" id="productName2"></p></div>
+                        <div class="col-6"> <p class="card-text cart-price" id="productCost2"><b></b></p></div>
+                        <div class="col-6"> <p class="card-text cart-rate" id="productRatings2"><b></b></p></div>
+                    </div>
+                    <div class="favHeart">
+                        <a href="#" id="restaurant02" target="_self">
+                            <img id="fav2" style="margin-top: 0px; margin-right: 5px" src="../assets/favourite/heartoutlineicon.png" width="26" height="26" align="right" />
+                            <img id="fav3" style="margin-top: -64px; margin-right: -248px" src="../assets/favourite/heartfillicon.png" width="26" height="26" align="right" />
+                        </a>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </div>
@@ -156,7 +172,7 @@
         <ul>
           <li><a target="_self" class="border"  data-transition="slide" href="../home.html"><img src="../assets/navBar/home.png" alt="Girl in a jacket" class="bar"></a></li>
           <li><a target="_self" class="border"  data-transition="slide" href="../profile.html"><img src="../assets/navBar/account.png" alt="Girl in a jacket" class="bar"></a></li>
-          <li><a target="_self" class="border"  data-transition="slide" href="../cart.html"><img src="../assets/navBar/cart.png" alt="Girl in a jacket" class="bar"></a></li>
+          <li><a target="_self" class="border"  data-transition="slide" href="../payment/cart-payment.html"><img src="../assets/navBar/cart.png" alt="Girl in a jacket" class="bar"></a></li>
           <li><a target="_self" class="border"  data-transition="slide" href="../qr/index.html"><img src="../assets/navBar/qr.png" alt="Girl in a jacket" class="bar"></a></li>
         </ul>
     </div>
@@ -169,7 +185,9 @@
     console.log("start favourite list loading")
     console.log(JSON.stringify(favouritesList));
     $('#fav').hide();
+    $('#fav2').hide();
     var res01 = document.getElementById("res01");
+    var res02 = document.getElementById("res02");
     var btnSendEmail = document.getElementById("btnSendEmail");
 
     if (favouritesList != null && favouritesList.length != 0) {
@@ -182,8 +200,18 @@
         } else {
             res01.style.display = "none";
         }
+        if (favouritesList != null && favouritesList[1]) {
+            res02.style.display = "block";
+            document.getElementById("productImage2").src = favouritesList[1].productImage;
+            document.getElementById("productName2").innerHTML = favouritesList[1].productName;
+            document.getElementById("productCost2").innerHTML = favouritesList[1].productCost;
+            document.getElementById("productRatings2").innerHTML = favouritesList[1].productRatings;
+        } else {
+            res02.style.display = "none";
+        }
     } else {
         res01.style.display = "none";
+        res02.style.display = "none";
         btnSendEmail.style.display = "none";
         localStorage.removeItem('favouriteList');
         alert("no favourite list item")
@@ -197,6 +225,21 @@
                 favouritesList = updatedFavList;
                 localStorage.setItem('favouriteList', JSON.stringify(favouritesList));
                 res01.style.display = "none";
+                if (favouritesList.length == 0) {
+                    btnSendEmail.style.display = "none";
+                    localStorage.removeItem('favouriteList');
+                }
+            }
+        }
+    });
+    $("#restaurant02").on('click', function(event) {
+        event.preventDefault();
+        for (i = 0; i < favouritesList.length; i++) {
+            if (favouritesList[i].productId == favouritesList[1].productId) {
+                var updatedFavList = favouritesList.filter(item => item.productId != favouritesList[1].productId);
+                favouritesList = updatedFavList;
+                localStorage.setItem('favouriteList', JSON.stringify(favouritesList));
+                res02.style.display = "none";
                 if (favouritesList.length == 0) {
                     btnSendEmail.style.display = "none";
                     localStorage.removeItem('favouriteList');
