@@ -378,6 +378,12 @@
     text-shadow: 0 1px 0 #eeeeee !important;
     font-weight: bold !important;
 }
+.rate {
+    position: relative !important;
+    top: 1px !important;
+    right: -35px;
+    color: #ffa500  !important;
+}
 @media screen and (orientation: landscape) {
     .cart-font {
         position: relative !important;

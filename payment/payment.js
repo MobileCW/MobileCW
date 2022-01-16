@@ -28,7 +28,7 @@ $(() => {
           name: "Pay",
           currency: "LKR",
           description: "FoodMunch Payment",
-          amount: 1000*100
+          amount: 1500*100
         });
         $(window).on ("popstate", function () {
           console.log("done");
