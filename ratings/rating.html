@@ -221,11 +221,37 @@
         margin-top: 5px;
         color: #8e8d8d;
     }
+    .backIcon {
+      height: 50px;
+      border-radius: 20px;
+      margin-left: 20px;
+    }
+    .heading {
+      font-size: 1.8rem!important;
+      position: relative!important;
+      padding-top: 10px;
+    }
   </style>
 
   <body>
     <div class="p-1">
-        <div class="ui-grid-a">
+        <div class="ui-grid-b">
+            <div class="ui-block-a" onclick="location.href='../home.html'">
+              <div class="ui-bar space border-color right" >
+                <img src="../assets/icons/icon10.png" alt="Back" class="backIcon" />
+              </div>
+            </div>
+            <div class="ui-block-b"> 
+                <div class="ui-bar space border-color right" >
+                    <p class="card-text heading"><b>Reviews</b></p>
+                </div>
+            </div> 
+            <div class="ui-block-b"> 
+                    <a class='edit' href='#popupLogin' data-rel='popup' data-position-to='window'   data-transition='pop' >ADD COMMENT</a>
+            </div>
+        </div>
+
+        <!-- <div class="ui-grid-a">
             <div class="ui-block-a">
                 <div class="ui-alt-icon" onclick="history.back()">
                   <a href="" target="_self" class="ui-btn ui-shadow ui-corner-all ui-icon-carat-l ui-btn-icon-notext ui-btn-inline button-back">Reviews</a>
@@ -236,8 +262,7 @@
             <div class="ui-block-b">
                 <a class='edit' href='#popupLogin' data-rel='popup' data-position-to='window'   data-transition='pop' >ADD COMMENT</a>
             </div>
-            
-        </div>
+        </div> -->
         <br>
         <div data-role="popup" id="popupLogin" data-theme="a" class="ui-corner-all">
             <div style="padding:10px 20px;">
