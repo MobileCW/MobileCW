@@ -4,22 +4,16 @@
 <head>
     <title>FoodMunch</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
-        integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
-        integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
-        crossorigin="anonymous"></script>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link rel="stylesheet" href="libraries/jquery.mobile-1.4.5.min.css" />
     <script src="libraries/jquery-1.11.3.min.js"></script>
     <script src="libraries/jquery.mobile-1.4.5.min.js"></script>
     <link rel="stylesheet" href="libraries/themes/foodMunchTheme.min.css" />
     <link rel="stylesheet" href="libraries/themes/jquery.mobile.icons.min.css" />
+    <link rel="stylesheet" href="styles/common.css" />
 </head>
 <style>
     .magic {
@@ -169,6 +163,13 @@
         border: none!important;
         border-radius: 0.25rem!important;
     }
+    .ui-page-theme-a .ui-bar-inherit {
+      background-color: #ffffff!important;
+      border-color: azure!important;
+      color: #333333!important;
+      text-shadow: 0 1px 0 #eeeeee!important;
+      font-weight: bold!important;
+    }
     @media screen and (orientation:landscape) {
         .to {
             position: relative!important;
@@ -179,15 +180,17 @@
         }
     }
 </style>
-
 <body>
-    <label for="text-basic">
-        <div class="ui-alt-icon">
-          <a href="home.html" target="_self" class="ui-btn ui-shadow ui-corner-all ui-icon-carat-l ui-btn-icon-notext ui-btn-inline button-back">Cart</a>
-          <div class="cart-description">Profile</div>
+    <div data-role="header" data-position="fixed">
+        <div class="ui-grid-a">
+            <label for="text-basic">
+                <div class="ui-alt-icon">
+                    <a href="home.html" target="_self" class="ui-btn ui-shadow ui-corner-all ui-icon-carat-l ui-btn-icon-notext ui-btn-inline button-back">Cart</a>
+                    <div class="cart-description">Profile</div>
+                </div>
+            </label>
         </div>
-      </label>
-
+    </div>
     <div class="student-profile py-4">
         <div class="container">
             <div class="row">
@@ -252,16 +255,14 @@
                 </div>
             </div>
             <div data-role="footer" data-position="fixed">
-                <div data-role="header">
-                  <div data-role="navbar" >
+                <div data-role="navbar">
                     <ul>
-                      <li><a href="home.html" class="ui-btn-active border" target="_self" data-transition="slide"><img src="assets/navBar/home.png" alt="Girl in a jacket" class="bar"></a></li>
-                      <li><a href="profile.html" class="border" target="_self" data-transition="slide"><img src="assets/navBar/account.png" alt="Girl in a jacket" class="bar"></a></li>
-                      <li><a href="cart.html" class="border" target="_self" data-transition="slide"><img src="assets/navBar/cart.png" alt="Girl in a jacket" class="bar"></a></li>
-                      <li><a href=".qr/index.html" class="border" target="_self" data-transition="slide"><img src="assets/navBar/qr.png" alt="Girl in a jacket" class="bar"></a></li>
+                      <li><a target="_self" class="border"  data-transition="slide" href="home.html"><img src="assets/navBar/home.png" alt="Girl in a jacket" class="bar"></a></li>
+                      <li><a target="_self" class="border ui-btn-active ui-state-persist"  data-transition="slide" href="profile.html"><img src="assets/navBar/account.png" alt="Girl in a jacket" class="bar"></a></li>
+                      <li><a target="_self" class="border"  data-transition="slide" href="cart.html"><img src="assets/navBar/cart.png" alt="Girl in a jacket" class="bar"></a></li>
+                      <li><a target="_self" class="border"  data-transition="slide" href="./qr/index.html"><img src="assets/navBar/qr.png" alt="Girl in a jacket" class="bar"></a></li>
                     </ul>
-                  </div>
-                </div> 
+                </div>
               </div>
         </div>
     </div>

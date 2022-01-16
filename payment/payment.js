@@ -9,9 +9,10 @@ $(() => {
             " <div class='alert alert-success' role='alert'> "+ 
            "Thank you, your payment was successful!"+
            " </div> ");
-           
-          // window.location.href = "success.html";
-           
+        setTimeout(myGreeting, 5000);
+        function myGreeting() {
+              window.location.href = "success.html";
+            }       
         }
       }
     });
