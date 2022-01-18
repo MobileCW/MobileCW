@@ -29,7 +29,7 @@
       background-color: #FF7622!important;
       color: #FFFFFF!important;
       text-shadow: none!important;
-      top: 88px!important;
+      top: 26px!important;
       width: 338px!important;
       border-radius: 12px!important;
     }
@@ -136,6 +136,12 @@
       text-shadow: 0 1px 0 #eeeeee!important;
       font-weight: bold!important;
     }
+    .totalq {
+      width: 100%!important;
+      position: relative!important;
+      top: 18px!important;
+      right: 4px!important;
+    }
     @media screen and (orientation:landscape) {
         .edit-one {
             position: relative!important;
@@ -154,24 +160,30 @@
             right: 15px!important;
         }
         .button-login {
-            position: relative!important;
-            right: -448px!important;
-            height: 62px!important;
-            background-color: #FF7622!important;
-            color: #FFFFFF!important;
-            text-shadow: none!important;
-            top: -38px!important;
-            width: 338px!important;
-            border-radius: 12px!important;
+          position: relative!important;
+          right: -448px!important;
+          height: 62px!important;
+          background-color: #FF7622!important;
+          color: #FFFFFF!important;
+          text-shadow: none!important;
+          top: -110px!important;
+          width: 338px!important;
+          border-radius: 12px!important;
         }
         .total {
-            position: relative!important;
-            top: 28px!important;
+          position: relative!important;
+          top: -4px!important;
         }
         .space {
             border: none!important;
             right: -75px!important;
             top: -48px;
+        }
+        .totalq {
+            width: 50%!important;
+            position: relative!important;
+            top: -36px!important;
+            right: 4px!important;
         }
       }
   </style>
@@ -198,7 +210,8 @@
       <div class="position-fixed card-route" data-position="fixed">
         <div class="card magic" >
           <div class="card-body">
-            <label class="total">TOTAL &nbsp; <b><span class="total-cart"></span></b></label>    
+            <label class="total">TOTAL &nbsp; <b><span class="total-cart"></span></b></label>  
+            <label class="totalq"> &nbsp; <b><input class="total-cart" value="Colombo 8,new road"></input></b></label>    
             <button type="button" class="btn btn-lg button-login" onclick="location.href='../payment/payment.html'">PLACE ORDER</button>
           </div> 
         </div>  
